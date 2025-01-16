@@ -2,5 +2,5 @@
 
 This is my Student website for all of my course work.
 
-[View Site](https://ginamari3.github.io/studentsite)
+[View site](https://ginamari3.github.io/studentsite)
 
