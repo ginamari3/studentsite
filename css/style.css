@@ -1,11 +1,11 @@
 /* GLOBAL RESET */
-* {box sizing: border-box;}
-body { margin: 0;}
+* { box-sizing: border-box; }
+body { margin: 0; }
 
 /* GLOBAL COLORS */
 body { color: rgba(0, 0, 0, 0.8); }
 a { color: rgba(0, 102, 204, 1); }
-a:hover { color: rgba(0, 51, 153, 1/0; }
+a:hover { color: rgba(0, 51, 153, 1); }
 
 /* GLOBAL TYPOGRAPHY */
 body {
