@@ -1,3 +1,37 @@
 body {
-    background: rgb(255,0,0);
+    font-family: Helvetica, Arial, sans-serif;
+    background: rgb(204,0,0);
+    margin: 0;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    place-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    text-align: center; 
+}
+
+p {
+    color: white;
+    max-width: 30em;
+    margin: 0 auto;
+}
+
+ul { 
+    text-align: left;
+    margin: auto;
+    padding: 0;
+}
+
+a {
+    color: white;
+   
 }
