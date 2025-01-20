@@ -18,10 +18,9 @@ body {
 header {
     background-color: rgba( 153, 0, 0, 1);
     color: rgba(255, 255, 255, 0.8);
-    padding: 1em;
+    /* padding: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: none;
+    grid-template-columns: 1fr 1fr; */
 
 }
 
@@ -32,6 +31,11 @@ header a {
 
 header a:hover { 
     color: rgba(255, 255, 255, 1);
+}
+
+/* SITE ID */
+site-id h1 {
+    margin: 0;
 }
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
