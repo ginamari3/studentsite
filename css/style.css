@@ -131,7 +131,7 @@ footer {
 @media (min-width: 768px) {
     .two-col-sidebar{
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 20em auto;
     }
     .two-col-sidebar aside {
         border-right: 10px solid pink;
@@ -139,11 +139,11 @@ footer {
 }
 
 aside {
-    border: 1px solid green;
+    padding: 1em 0;
 }
 
 .primary {
-    border: 1px solid blue;
+    
 }
 
 /* STYLING FOR SUB PAGES */
