@@ -128,10 +128,12 @@ footer {
 
 }
 
-
 @media min-width: 768px) {
     .two-col-sidebar{
         display: flex;
+    }
+    .two-col-siderbar aside{
+        border-right: 10px solid pink;
     }
 }
 
