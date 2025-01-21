@@ -118,7 +118,7 @@ footer {
 
 /* LAYOUT */
 .container{
-    border: 1px solid color red;
+    border: 1px solid red;
     max-width: 1000px;
     margin: 0 auto;
 }
