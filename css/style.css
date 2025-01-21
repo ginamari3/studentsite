@@ -34,7 +34,7 @@ header a:hover {
     color: rgba(255, 255, 255, 1);
 }
 
-/* SITE ID */
+/* SITE ID */ 
 .site-id h1 {
     margin: 0;
 }
@@ -45,6 +45,7 @@ header a:hover {
     justify-content: flex-end;
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 .site-nav a {
