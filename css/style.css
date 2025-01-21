@@ -132,9 +132,9 @@ footer {
         display: grid;
         grid-template-columns: 25% 75%;
     }
-    .two-col-sidebar aside {
+    /* .two-col-sidebar aside {
       border-right: 1px solid rgba( 0, 0, 0, .1);
-    }
+    } */
 }
 
 aside {
