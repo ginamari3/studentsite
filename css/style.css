@@ -34,7 +34,7 @@ header a:hover {
 }
 
 /* SITE ID */
-site-id h1 {
+.site-id h1 {
     margin: 0;
 }
 /* FOR WEB DEV PURPOSES ONLY */
