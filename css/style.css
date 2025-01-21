@@ -118,7 +118,6 @@ footer {
 
 /* LAYOUT */
 .container{
-    border: 1px solid red;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -139,7 +138,7 @@ footer {
 }
 
 aside {
-    padding: 1em 0;
+    padding: 3em 0;
 }
 
 .primary {
