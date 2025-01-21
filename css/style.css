@@ -80,6 +80,7 @@ footer {
 .hero {
     background-color: rgba( 153, 0, 0, 1);
     color: rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
 
 /* FOR WEB DEV PURPOSES ONLY */
