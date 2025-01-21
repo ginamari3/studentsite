@@ -9,32 +9,34 @@ a:hover { color: rgba(0, 51, 153, 1); }
 
 /* GLOBAL TYPOGRAPHY */
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 88.75% /* 14px */
-    line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 88.75%; /* 14px */
+  line-height: 1.4;
 }
 
-/* HEADER */
+
+/* SITE STRUCTURE */
+
 header {
-    background-color: rgba( 153, 0, 0, 1);
-    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 102, 204, 1);
+    color: rgba(0, 0, 0, 0.8); 
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
 }
 
-header a { 
+header a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
 }
 
-header a:hover { 
+header a:hover {
     color: rgba(255, 255, 255, 1);
 }
 
-/* SITE ID */ 
+
+/* SITE ID */
 .site-id h1 {
     margin: 0;
 }
@@ -43,36 +45,31 @@ header a:hover {
 .site-nav ul {
     display: flex;
     justify-content: flex-end;
-    list-style: none;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.site-nav a {
+.site-nav  a {
     display: block;
     padding: 1em;
 }
 
 /* MAIN */
 main {
-    background: rgba(0, 0, 0, .05);
-}
-
-section {
-    padding: 3em 1em;
+    background: rgba(0,0,0,.05);
 }
 
 /* HERO SECTION */
 .hero {
-    background-color: rgba( 153, 0, 0, 1);
-    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 102, 204, 1);
     text-align: center;
-    padding: 6em 1em; 
+    color: white;
+    padding: 6em 1em;
 }
 
 .hero h2 {
-    font-size: 6em;  
+    font-size: 6em;
     line-height: 1;
     text-transform: uppercase;
     margin: 0 auto;
@@ -83,7 +80,7 @@ section {
     margin: 1em auto;
 }
 
-/* COURSE SECTION */
+/* COURSES SECTION */
 .courses {
     padding: 6em 1em;
     display: grid;
@@ -96,69 +93,64 @@ section {
     list-style: none;
 }
 
-.courses h3 {
+.courses h3{
     text-align: center;
 }
 
 /* FOOTER */
 footer {
-    border-top: 1px solid rgba(0, 0, 0, .05);
-    padding:1em;
+    border-top: 1px solid rgba(0,0,0,.05);
+    padding: 1em;
 }
 
 /* SOCIAL NAV */
 .social-nav ul {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.social-nav a {
+.social-nav  a {
     display: block;
     padding: 1em;
 }
 
 /* LAYOUT */
-.container{
+.container {
     max-width: 1000px;
     margin: 0 auto;
 }
 
+section {
+    padding: 3em 1em;
+}
 
+/* SIDEBAR/ASIDE */
+aside {
+    padding: 2em 0;
+  }
+  
 @media (min-width: 768px) {
-    .two-col-sidebar{
+    .two-col-sidebar {
         display: grid;
         grid-template-columns: 20em auto;
     }
     .two-col-sidebar aside {
-      border-right: 1px solid rgba( 0, 0, 0, .1);
-      margin: 0 3em 2em 0;
-      padding: 0.3em 2em 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0 3em 2em 0;
+        padding: .3em 2em 0 0;
     }
 }
 
-aside {
- ; 
-}
-
-.primary {
-    padding:0 1em;
-}
-
-/* STYLING FOR SUB PAGES */
+/* SUB PAGES */
 .page-sub .hero {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.8 );
+    background-color:rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.8);
 }
 
-/* COURSEWORK */
-.coursework {
-    padding: 6em 1em;
-}
-
-/* COURSE PAGE WITH MULTIPLE PROJECT LISTS */
+/* COURSE PAGES WITH MULTIPLE PROJECT LISTS */
 .coursework {
     padding: 3em 1em;
     display: flex;
@@ -166,11 +158,12 @@ aside {
     flex-wrap: wrap;
 }
 
-.project{
+.project {
     margin: 2em;
 }
 
 /* CODE BLOCKS */
+
 pre code {
     width: 100%;
     display: block;
@@ -198,9 +191,9 @@ dd {
     margin: 0;
 }
 
-/* FOR WEB DEV PURPOSES ONLY */
-/* body, * {
-    background-color: rgba(0,0,0,.05);
-    border: 1px solid rgba(0,0,0,.1);
-    color: rgba(0,0,0,.5);
+/* FOR DEV PURPOSES */
+/* body * {
+    background-color: rgba(0,0,0,.05) !important;
+    border: 1px solid rgba(0,0,0,.1) !important;
+    color: rgba(0,0,0,.5) !important;
 } */
