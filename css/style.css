@@ -123,6 +123,11 @@ footer {
     color: rgba(0, 0, 0, 0.8 );
 }
 
+/* COURSEWORK */
+.coursework {
+    padding: 6em 1em;
+}
+
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
