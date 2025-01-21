@@ -118,7 +118,7 @@ footer {
 
 /* LYOUT */
 .container{
-    border: 1px solid color red;
+    border: 1px solid color: red;
     margin: 0 auto
     max-width: 1000px;
 }
