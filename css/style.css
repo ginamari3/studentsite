@@ -128,6 +128,14 @@ footer {
 
 }
 
+.aside{
+    border: 1px solid green;
+}
+
+.primary {
+    border: 1px solid blue;
+}
+
 /* STYLING FOR SUB PAGES */
 .page-sub .hero {
     background-color: rgba(0, 0, 0, 0.1);
