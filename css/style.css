@@ -92,7 +92,8 @@ footer {
 }
 
 .hero p {
-    
+    max-width: 30em;
+    margin: 1em auto;
 }
 
 /* FOR WEB DEV PURPOSES ONLY */
