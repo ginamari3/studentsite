@@ -126,10 +126,6 @@ footer {
     margin: 0 auto;
 }
 
-.two-col-sidebar{
-    display: flex;
-
-}
 
 @media (min-width: 768px) {
     .two-col-sidebar{
