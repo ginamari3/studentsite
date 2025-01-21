@@ -71,11 +71,17 @@ footer {
     padding: 0;
 }
 
-
 .social-nav a {
     display: block;
     padding: 1em;
 }
+
+/* HERO SECTION */
+.hero {
+    background-color: rgba( 153, 0, 0, 1);
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
