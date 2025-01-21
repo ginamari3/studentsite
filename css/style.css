@@ -67,9 +67,14 @@ footer {
     display: flex;
     justify-content: center;
     list-style: none;
-    background: pink;
+    background: rgba(255, 0, 0, .5);
+    border: 2px solid rgba(255, 0, 0, .5);
 }
 
+.social-nav li {
+    background: rgba(255, 0, 0, .5);
+    border: 2px solid rgba(255, 0, 0, .5);
+}
 .social-nav a {
     display: block;
     padding: 1em;
