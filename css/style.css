@@ -42,12 +42,7 @@ header a:hover {
 .site-nav ul {
     display: flex;
     justify-content: flex-end;
-    border: 2px solid blue;
     list-style: none;
-}
-
-.site-nav li {
-    border: 2px solid green;
 }
 
 .site-nav a {
