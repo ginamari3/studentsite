@@ -128,7 +128,7 @@ footer {
 
 }
 
-@media min-width: 768px) {
+@media (min-width: 768px) {
     .two-col-sidebar{
         display: flex;
     }
