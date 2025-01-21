@@ -134,7 +134,7 @@ footer {
         grid-template-columns: 20em auto;
     }
     .two-col-sidebar aside {
-        border-right: 10px solid pink;
+      
     }
 }
 
