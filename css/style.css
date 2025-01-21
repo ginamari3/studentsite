@@ -41,6 +41,10 @@ header a:hover {
 /* SITE NAV */
 .site-nav ul {
     display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
