@@ -102,6 +102,9 @@ footer {
     display: grid;
 }
 
+.courses h3 {
+    text-align: center;
+}
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
