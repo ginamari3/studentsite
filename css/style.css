@@ -130,15 +130,15 @@ footer {
 @media (min-width: 768px) {
     .two-col-sidebar{
         display: grid;
-        grid-template-columns: 20em auto;
+        grid-template-columns: 25% 75%;
     }
     .two-col-sidebar aside {
-      
+      border-right: 1px solid rgba( 0, 0, 0, .1);
     }
 }
 
 aside {
-    padding: 3em 0;
+    padding: 2.4em 1;
 }
 
 .primary {
