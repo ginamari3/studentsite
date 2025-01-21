@@ -116,6 +116,12 @@ footer {
     padding: 1em;
 }
 
+/* LYOUT */
+.container{
+    border: 1px solid color red;
+    margin: 0 auto
+    max-width: 1000px;
+}
 
 /* STYLING FOR SUB PAGES */
 .page-sub .hero {
