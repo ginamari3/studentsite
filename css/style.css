@@ -46,6 +46,11 @@ header a:hover {
     padding: 0;
     list-style: none;
 }
+
+.site-nav a {
+    display: block;
+    padding: 1em;
+}
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
