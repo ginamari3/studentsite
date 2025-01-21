@@ -81,6 +81,18 @@ footer {
     background-color: rgba( 153, 0, 0, 1);
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
+    padding: 6em 1em; 
+}
+
+.hero h2 {
+    font-size: 6em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.hero p {
+    
 }
 
 /* FOR WEB DEV PURPOSES ONLY */
