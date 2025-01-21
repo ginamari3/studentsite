@@ -115,6 +115,14 @@ footer {
     display: block;
     padding: 1em;
 }
+
+
+/* STYLING FOR SUB PAGES */
+.page-sub .hero {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.8 );
+}
+
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
