@@ -50,6 +50,11 @@ header a:hover {
     display: block;
     padding: 1em;
 }
+
+/* MAIN */
+main {
+    background: rgba(0, 0, 0, .05);
+}
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
