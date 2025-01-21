@@ -116,11 +116,11 @@ footer {
     padding: 1em;
 }
 
-/* LYOUT */
+/* LAYOUT */
 .container{
-    border: 1px solid color: red;
-    margin: 0 auto
+    border: 1px solid color red;
     max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* STYLING FOR SUB PAGES */
