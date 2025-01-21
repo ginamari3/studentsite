@@ -59,6 +59,10 @@ main {
     background: rgba(0, 0, 0, .05);
 }
 
+section {
+    padding: 3em 1em;
+}
+
 /* HERO SECTION */
 .hero {
     background-color: rgba( 153, 0, 0, 1);
@@ -138,12 +142,9 @@ footer {
 }
 
 aside {
-    padding: 2.4em 1;
+    padding: 0 1em;
 }
 
-.primary {
-    padding: 1em;
-}
 
 /* STYLING FOR SUB PAGES */
 .page-sub .hero {
