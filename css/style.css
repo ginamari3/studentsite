@@ -128,6 +128,13 @@ footer {
 
 }
 
+
+@media min-width: 768px) {
+    .two-col-sidebar{
+        display: flex;
+    }
+}
+
 aside {
     border: 1px solid green;
 }
