@@ -37,6 +37,11 @@ header a:hover {
 .site-id h1 {
     margin: 0;
 }
+
+/* SITE NAV */
+.site-nav ul {
+    display: flex;
+}
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
