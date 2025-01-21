@@ -123,6 +123,11 @@ footer {
     margin: 0 auto;
 }
 
+.two-col-sidebar{
+    display: flex;
+
+}
+
 /* STYLING FOR SUB PAGES */
 .page-sub .hero {
     background-color: rgba(0, 0, 0, 0.1);
