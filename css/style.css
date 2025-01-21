@@ -130,9 +130,10 @@ footer {
 
 @media (min-width: 768px) {
     .two-col-sidebar{
-        display: flex;
+        display: grid;
+        grid-template-columns: 25% 75%;
     }
-    .two-col-siderbar aside{
+    .two-col-sidebar aside {
         border-right: 10px solid pink;
     }
 }
