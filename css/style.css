@@ -145,6 +145,9 @@ aside {
     padding: 0 1em;
 }
 
+.primary {
+    padding: 1em;
+}
 
 /* STYLING FOR SUB PAGES */
 .page-sub .hero {
