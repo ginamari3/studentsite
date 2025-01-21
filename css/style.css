@@ -130,10 +130,12 @@ footer {
 @media (min-width: 768px) {
     .two-col-sidebar{
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 20em auto;
     }
     .two-col-sidebar aside {
       border-right: 1px solid rgba( 0, 0, 0, .1);
+      margin: 0 3em 2em 0;
+      padding: 0.3em 2em 0;
     }
 }
 
@@ -166,6 +168,34 @@ aside {
 
 .project{
     margin: 2em;
+}
+
+/* CODE BLOCKS */
+pre code {
+    width: 100%;
+    display: block;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 1em 3em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+  }
+
+.markup-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1em 3em;
+    margin-bottom: 1em;
+}
+
+/* DEFINITION LISTS */
+dt {
+    font-weight: bold;
+    margin-top: 1em;
+}
+dd {
+    margin: 0;
 }
 
 /* FOR WEB DEV PURPOSES ONLY */
