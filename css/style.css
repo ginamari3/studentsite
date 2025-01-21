@@ -55,6 +55,25 @@ header a:hover {
 main {
     background: rgba(0, 0, 0, .05);
 }
+
+/* FOOTER */
+footer {
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    padding:1em;
+}
+
+/* SOCIAL NAV */
+.social-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: pink;
+}
+
+.social-nav a {
+    display: block;
+    padding: 1em;
+}
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
