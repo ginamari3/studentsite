@@ -59,9 +59,7 @@ main {
     background: rgba(0, 0, 0, .05);
 }
 
-section {
-    padding: 3em 1em;
-}
+
 
 /* HERO SECTION */
 .hero {
@@ -146,7 +144,7 @@ aside {
 }
 
 .primary {
-    padding: 1em;
+    padding:0 1em;
 }
 
 /* STYLING FOR SUB PAGES */
