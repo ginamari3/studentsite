@@ -137,11 +137,11 @@ footer {
     }
 }
 
-
-
-.primary {
-    padding:0 1em;
+aside {
+    padding: 0 1em;
 }
+
+
 
 /* STYLING FOR SUB PAGES */
 .page-sub .hero {
