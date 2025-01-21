@@ -96,6 +96,12 @@ footer {
     margin: 1em auto;
 }
 
+/* COURSE SECTION */
+.courses {
+    padding: 6em 1em;
+    display: grid;
+}
+
 /* FOR WEB DEV PURPOSES ONLY */
 /* body, * {
     background-color: rgba(0,0,0,.05);
