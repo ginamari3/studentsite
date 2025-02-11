@@ -113,8 +113,8 @@ img {
 
 /* BUTTONS */
 .button {
-    background-color: rgba(0,0,153,.8);
-    border: 1px solid rgba(0,0,153,.8);
+    background-color: rgba(0,0,153,1);
+    border: 1px solid rgba(0,0,153,1);
     color: rgba(255,255,255,.8);
     padding: 1em;
     display: inline-block;
@@ -126,13 +126,13 @@ img {
 .button:hover {
     background-color: rgba(0,0,153,1);
     border-color: rgba(0,0,153,1);
-    color: rgba(255,255,255,.8);
+    color: rgba(255,255,255,1);
     text-decoration: none;
 }
 
 .button.alt {
     background-color: transparent;
-    color: rgba(0,0,153,.8);
+    color: rgba(0,0,153,1);
 }
 
 .button.alt:hover {
