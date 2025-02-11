@@ -155,7 +155,7 @@ body { margin: 0;}
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: pink;
+    
 }
 
 /* MEDIA QUERIES */
@@ -169,11 +169,17 @@ body { margin: 0;}
         .container {
             background-color: blue;
         }
-    }
+}
 
 @media (min-width: 1250px) {
             .container {
                 background-color: purple;
             }
+}
 
+/* FOR DEMO PURPOSES ONLY */
+
+body.demo::before {
+    content: "Small Screen Less Than 780px";
+    background-color: pink;
 }
