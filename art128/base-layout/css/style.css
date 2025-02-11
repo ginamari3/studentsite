@@ -169,6 +169,9 @@ body { margin: 0;}
             font-size: 100%; /* 16px */
         }
         .container {
+            .container {
+                max-width: 1000px;
+                } 
         }
 }
 
@@ -177,7 +180,8 @@ body { margin: 0;}
         font-size: 112.5%; /* 18px */
     }        
     .container {
-            }
+          
+    }
 }
 
 /* FOR DEMO PURPOSES ONLY */
