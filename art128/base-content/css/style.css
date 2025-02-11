@@ -79,10 +79,7 @@ p{
     max-width: 38em;
 }
 
-strong {
-    font-weight: 700;
-}
-
-em {
-    font-style: italic;
+/* LINES */
+# {
+    color: rgba(0,0,0,1)
 }
