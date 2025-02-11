@@ -114,5 +114,6 @@ img {
 /* BUTTONS */
 .button {
     background-color: rgba(0,0,153,.8);
-    color: regba(255,255,255,.8);
+    color: rgba(255,255,255,.8);
+    padding: 1em;
 }
