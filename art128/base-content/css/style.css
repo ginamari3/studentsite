@@ -94,3 +94,7 @@ a:hover {
 .text-centered {
     text-align: center;
 }
+
+.full-width {
+    max-width: none;
+}
