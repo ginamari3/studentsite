@@ -161,38 +161,40 @@ body { margin: 0;}
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
     .container {
-        background-color: green;
     }
 }
 
 @media (min-width: 1050px) {
         .container {
-            background-color: blue;
         }
 }
 
 @media (min-width: 1250px) {
             .container {
-                background-color: purple;
             }
 }
 
 /* FOR DEMO PURPOSES ONLY */
+body.demo{
+    padding-top: 2em;
+}
 
 body.demo::before {
-    content: "Small Screen Less Than 780px";
+    content: "Small Screen (Mobile) Less Than 780px";
     background-color: #933;
     width: 100%;
     position: fixed;
     top: 0;
     text-align: center;
     color: white;
+    padding: .5em;
 
 }
 
 @media (min-width: 768px) {
     body.demo::before {
         background-color: #bcb83d;
+        content: "Midsize (Tablet) Screen 780px - 1050px";
     
     }
 }
@@ -200,6 +202,6 @@ body.demo::before {
 @media (min-width: 1050px) {
     body.demo::before {
         background-color: #693;
-    
+        content: "Large (Notebook) Screen 1250px - ";
     }
 }
