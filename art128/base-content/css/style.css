@@ -114,6 +114,7 @@ img {
 /* BUTTONS */
 .button,
 button {
+    font-size: inherit;
     background-color: rgba(0,0,204,1);
     border: 1px solid rgba(0,0,204,1);
     color: rgba(255,255,255,1);
