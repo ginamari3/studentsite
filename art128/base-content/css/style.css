@@ -87,4 +87,7 @@ a {
 
 a:hover {
     color: rgba(0,0,102,1);
+    text-decoration: underline;
 }
+
+/* HELPER CLASSES */
