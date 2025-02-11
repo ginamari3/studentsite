@@ -127,3 +127,8 @@ img {
     color: rgba(255,255,255,.8);
     text-decoration: none;
 }
+
+.button.alt {
+    border: 1px solid rgba(0,0,153,.8);
+    background-color: transparent;
+}
