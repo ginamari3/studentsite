@@ -133,3 +133,8 @@ img {
     background-color: transparent;
     color: rgba(0,0,153,.8);
 }
+
+.button.alt:hover {
+    background-color: rgba(0,0,153,1);
+    color: rgba(255,255,255,.8);
+}
