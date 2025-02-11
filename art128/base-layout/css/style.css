@@ -181,8 +181,25 @@ body { margin: 0;}
 
 body.demo::before {
     content: "Small Screen Less Than 780px";
-    background-color: pink;
+    background-color: #933;
     width: 100%;
     position: fixed;
     top: 0;
+    text-align: center;
+    color: white;
+
+}
+
+@media (min-width: 768px) {
+    body.demo::before {
+        background-color: #bcb83d;
+    
+    }
+}
+
+@media (min-width: 1050px) {
+    body.demo::before {
+        background-color: #693;
+    
+    }
 }
