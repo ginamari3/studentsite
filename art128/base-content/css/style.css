@@ -91,3 +91,6 @@ a:hover {
 }
 
 /* HELPER CLASSES */
+.text-centered {
+    text-align: center;
+}
