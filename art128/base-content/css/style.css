@@ -120,3 +120,8 @@ img {
     margin: .5em;
     text-align: center;
 }
+
+.button:hover {
+    background-color: rgba(0,0,153,1);
+    color: rgba(255,255,255,.8);
+}
