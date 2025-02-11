@@ -182,4 +182,7 @@ body { margin: 0;}
 body.demo::before {
     content: "Small Screen Less Than 780px";
     background-color: pink;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
