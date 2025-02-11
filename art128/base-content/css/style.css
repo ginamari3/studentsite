@@ -74,16 +74,16 @@ h6 {
 
 /* PARAGRAPHS */
 
-p{
+p {
     margin: .5em 0;
     max-width: 38em;
 }
 
 /* LINES */
 a {
-    color rgba(0,0,0.9);
+    color: rgba(0,0,0.9);
 }
 
 a:hover {
-    rgba(0,0,0,.9);
+    color: rgba(0,0,0,.9);
 }
