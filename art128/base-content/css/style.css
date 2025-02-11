@@ -31,7 +31,7 @@
 
 body {
     font-size: 87.5%; /* 14px = 1em */
-    font-family: Helvetca, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5;
     color: rgba(0, 0, 0, .8);
 }
@@ -117,5 +117,6 @@ img {
     color: rgba(255,255,255,.8);
     padding: 1em;
     display: inline-block;
-    margin: 1em;
+    margin: .5em;
+    text-align: center;
 }
