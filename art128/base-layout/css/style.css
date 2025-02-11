@@ -143,3 +143,37 @@ button:hover {
     background-color: rgba(0,0,153,1);
     color: rgba(255,255,255,.8);
 }
+
+
+/* LAYOUT */
+
+/* SIMPLE REST */
+* { box-sizing: border-box; }
+body { margin: 0;}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+    .container {
+        background-color: green;
+    }
+}
+
+@media (min-width: 1050px) {
+        .container {
+            background-color: blue;
+        }
+    }
+
+@media (min-width: 1250px) {
+            .container {
+                background-color: purple;
+            }
+
+}
