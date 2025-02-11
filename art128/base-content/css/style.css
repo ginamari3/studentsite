@@ -82,6 +82,7 @@ p {
 /* LINES */
 a {
     color: rgba(0,0,0.9);
+    text-decoration: none;
 }
 
 a:hover {
