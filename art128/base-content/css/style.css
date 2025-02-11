@@ -112,7 +112,8 @@ img {
 }
 
 /* BUTTONS */
-.button {
+.button,
+button {
     background-color: rgba(0,0,204,1);
     border: 1px solid rgba(0,0,204,1);
     color: rgba(255,255,255,1);
@@ -123,7 +124,8 @@ img {
     border-radius: .5em;
 }
 
-.button:hover {
+.button:hover,
+button:hover {
     background-color: rgba(0,0,153,1);
     border-color: rgba(0,0,153,1);
     color: rgba(255,255,255,1);
