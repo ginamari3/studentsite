@@ -81,10 +81,10 @@ p {
 
 /* LINES */
 a {
-    color: rgba(0,0,255,.5);
+    color: rgba(0,0,153,.8);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgba(0,0,0,.9);
+    color: rgba(0,0,153,.1);
 }
