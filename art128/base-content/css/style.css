@@ -97,4 +97,10 @@ a:hover {
 
 .full-width {
     max-width: none;
+    width: 100%;
+}
+
+.horiz-conter {
+    margin-left: auto;
+    margin-right: auto;
 }
