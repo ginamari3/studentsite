@@ -76,5 +76,9 @@ h6 {
 
 p{
     margin: .5em 0;
-    max-width: 60ch;
+    max-width: 38em;
+}
+
+strong {
+    font-weight: 700;
 }
