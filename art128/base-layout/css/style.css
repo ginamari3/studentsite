@@ -165,12 +165,18 @@ body { margin: 0;}
 }
 
 @media (min-width: 1050px) {
+        body {
+            font-size: 100%; /* 16px */
+        }
         .container {
         }
 }
 
 @media (min-width: 1250px) {
-            .container {
+    body {
+        font-size: 112.5%; /* 18px */
+    }        
+    .container {
             }
 }
 
@@ -203,5 +209,12 @@ body.demo::before {
     body.demo::before {
         background-color: #693;
         content: "Large (Notebook) Screen 1250px - ";
+    }
+}
+
+@media (min-width: 1250px) {
+    body.demo::before {
+        background-color: #09c;
+        content: "Extra Large Screen 1250px - ";
     }
 }
