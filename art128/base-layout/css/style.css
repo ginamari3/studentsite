@@ -224,6 +224,28 @@ body.demo::before {
     margin-bottom: 1em;
 }
 
+
+/* CAN ONLY WORK FOR TABLET OR HIGHER, NOT SMALL DEVICES */
+@media (min-width: 768px) {
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .row > .column {
+        flex-grow: 1;
+    }
+
+    .row > .column.one-half {
+        max-width: 49%;
+    }
+
+    .row > .column.one-third {
+        max-width: 32.3333%;
+    }
+}
+
 /* FOR DEMO PURPOSES ONLY */
 .demo .column {
     background: rgba(0,0,0,.2);
@@ -231,12 +253,6 @@ body.demo::before {
     text-align: center;
 }
 
-/* CAN ONLY WORK FOR TABLET OR HIGHER, NOT SMALL DEVICES */
 
-@media (min-width: 768px) {
 
-    .row {
-        display: flex;
-    }
 
-}
