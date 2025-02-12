@@ -153,7 +153,7 @@ body { margin: 0;}
 
 /* CONTAINER */
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 4%;
     
@@ -161,26 +161,21 @@ body { margin: 0;}
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
-    .container {
-    }
+    /* TABLET SIZED STYLING GO HERE */
 }
 
 @media (min-width: 1050px) {
         body {
             font-size: 100%; /* 16px */
         }
-        .container {
-            .container {
-                max-width: 1000px;
-                } 
-        }
 }
 
 @media (min-width: 1250px) {
     body {
-        font-size: 112.5%; /* 18px */
+            font-size: 112.5%; /* 18px */
     }        
     .container {
+        max-width: 1200px;
           
     }
 }
