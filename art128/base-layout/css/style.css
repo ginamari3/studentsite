@@ -200,7 +200,7 @@ body.demo::before {
 @media (min-width: 768px) {
     body.demo::before {
         background-color: #bcb83d;
-        content: "Midsize (Tablet) Screen 780px - 1050px";
+        content: "Midsize (Tablet) Screen 768px - 1050px";
     
     }
 }
@@ -208,13 +208,35 @@ body.demo::before {
 @media (min-width: 1050px) {
     body.demo::before {
         background-color: #693;
-        content: "Large (Notebook) Screen 1250px - ";
+        content: "Large (Notebook) Screen 1050px - 1250px ";
     }
 }
 
 @media (min-width: 1250px) {
     body.demo::before {
         background-color: #09c;
-        content: "Extra Large Screen 1250px - ";
+        content: "Extra Large Screen 1250px + ";
     }
+}
+
+/* SEMANTIC GRID SYSTEM */
+.row > .column {
+    margin-bottom: 1em;
+}
+
+/* FOR DEMO PURPOSES ONLY */
+.demo .column {
+    background: rgba(0,0,0,.2);
+    padding: 1em;
+    text-align: center;
+}
+
+/* CAN ONLY WORK FOR TABLET OR HIGHER, NOT SMALL DEVICES */
+
+@media (min-width: 768px) {
+
+    .row {
+        display: flex;
+    }
+
 }
