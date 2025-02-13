@@ -221,7 +221,7 @@ body.demo::before {
 
 /* SEMANTIC GRID SYSTEM */
 .row > .column {
-    margin-bottom: 1em;
+    margin-bottom: 4%;
 }
 
 
@@ -231,18 +231,35 @@ body.demo::before {
     .row {
         display: flex;
         justify-content: space-between;
+        margin-left: -2%;
+        margin-right: -2%;
     }
 
     .row > .column {
         flex-grow: 1;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 
     .row > .column.one-half {
-        max-width: 49%;
+        max-width: 46%;
     }
 
     .row > .column.one-third {
-        max-width: 32.3333%;
+        max-width: 29.3333%;
+    }
+
+    .row > .column.two-thirds {
+        max-width: 62.6666%;
+    }
+
+    .row > .column.one-fourth {
+        max-width: 21%;
+    }
+
+    .row > .column.centered {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
