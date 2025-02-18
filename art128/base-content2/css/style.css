@@ -27,7 +27,9 @@
             #TOGGLE-NAV (Default for Small Screens)
 --------------------------------- */
 
+
+/* BASE TYPOGRAPHY */
 body {
-    background-color: yellow;
-    
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
 }
