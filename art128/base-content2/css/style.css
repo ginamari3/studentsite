@@ -26,3 +26,8 @@
         #SITE NAVIGATION
             #TOGGLE-NAV (Default for Small Screens)
 --------------------------------- */
+
+body {
+    background-color: yellow;
+    
+}
