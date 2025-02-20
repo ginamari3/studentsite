@@ -271,5 +271,11 @@ body.demo::before {
 }
 
 
+/* SITE STRUCTURE */
+
+/* SITE HEADER */
+.site-header {
+    background-color: rgba(255, 0,0,.2);
+}
 
 
