@@ -319,14 +319,14 @@ body.demo::before {
     justify-content: center;
 }
 
-
-
 .site-nav a {
     display: block;
     padding: 1em;
 }
 
-
+.site-nav .menu-button {
+    display: none;
+}
 
 /* SECTIONS */
 section {
@@ -349,3 +349,9 @@ section {
 }
 
 /* TOGGLE NAV */
+
+@media (max-width: 767px) {
+    .toggle-nav {
+        background: red;
+    }
+}
