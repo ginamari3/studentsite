@@ -315,7 +315,7 @@ body.demo::before {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex; 
+    /* display: flex;  */
     justify-content: center;
 }
 
@@ -354,7 +354,21 @@ section {
     .toggle-nav .site-id {
         position: absolute;
     }
-    .toggle-nav .site-nv ul{
+
+    .toggle-nav .site-nav {
+        text-align: right;
+    }
+
+
+    .toggle-nav .site-nav .menu-button {
         display: block;
+        background: pink;
+        display: inline-block;
+    }
+
+
+    .toggle-nav .site-nv ul {
+        display: block;
+        text-align: center;
     }
 }
