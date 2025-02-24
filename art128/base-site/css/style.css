@@ -342,7 +342,13 @@ section {
     text-align: center;
 }
 
-.hero {
+
+.hero h1 p {
+    max-width: 200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero {
+    
 }
