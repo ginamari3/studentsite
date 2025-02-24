@@ -326,10 +326,7 @@ body.demo::before {
     padding: 1em;
 }
 
-/* SITE MAIN */
-.site-main {
-    background-color: rgba(0, 255,0,.2);
-}
+
 
 /* SECTIONS */
 section {
@@ -337,6 +334,15 @@ section {
 }
 
 /* HERO */
+
+
 .hero {
-    background-color: rgba(255,255,.2);
+    padding: 6em 4%;
+    background-color: rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.hero {
+    margin-left: auto;
+    margin-right: auto;
 }
