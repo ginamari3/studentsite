@@ -337,16 +337,16 @@ section {
 
 
 .hero {
-    padding: 6em 4%;
+    padding: 6em 0;
     background-color: rgba(0,0,0,.18);
     text-align: center;
 }
 
 
 .hero h1, p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1000px;
+    margin-left: 0 auto;
+    margin-right: 0 4%;
 }
 
 .hero {
