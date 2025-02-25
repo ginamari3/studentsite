@@ -362,13 +362,28 @@ section {
 
     .toggle-nav .site-nav .menu-button {
         display: block;
-        background: pink;
         display: inline-block;
+        cursor: pointer;
+        padding: .5em .8em;
+        margin-bottom: .8em;
+        border: 1px solid black;
     }
 
+    .toggle-nav .site-nav .menu-button::selection {
+        background-color: rgba(255,255,255,0);
+    }
 
-    .toggle-nav .site-nv ul {
+    .toggle-nav .site-nav ul {
         display: block;
         text-align: center;
+    }
+
+    .toggle-nav .site-nav a:hover {
+        background-color: rgba(0,0,153,1);
+        color: white;
+    }
+
+    .toggle-nav[data-navstate="closed"] {
+        background: red;
     }
 }
