@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const menubutton = document.querySelector('.menu-button');
     const menunav = document.querySelector('.toggle-nav');
     menubutton.addEventListener('click', function() {
-        if (menunav.getAttribute('data-navstate')=== 'open') {
+        if (menunav.getAttribute('data-navstate') === 'open') {
             // if true do this
-            menunav.setAttribute('data-nacstate', 'closed');
+            menunav.setAttribute('data-navstate', 'closed');
         } else {
             // else (if false) do this
-            menunav.setAttribute('data-nacstate', 'open');
+            menunav.setAttribute('data-navstate', 'open');
         }
     });
 
