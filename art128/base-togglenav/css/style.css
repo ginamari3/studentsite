@@ -315,7 +315,7 @@ body.demo::before {
     margin: 0;
     padding: 0;
     list-style: none;
-    /* display: flex;  */
+    display: flex; 
     justify-content: center;
 }
 
