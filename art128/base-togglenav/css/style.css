@@ -383,7 +383,13 @@ section {
         color: white;
     }
 
-    .toggle-nav[data-navstate="closed"] {
-        background: red;
+    .toggle-nav[data-navstate="closed"] ul {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .toggle-nav[data-navstate="open"] ul {
+        height: auto;
+        overflow: visible;
     }
 }
