@@ -106,8 +106,19 @@ a:hover {
 }
 
 .hidden {
-    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
     border: 1px solid red;
+}
+
+@media (min-width: 768px) {
+.hidden-desktop {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    border: 1px solid red;
+}
 }
 
 /* IMAGES */
