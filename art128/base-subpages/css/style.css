@@ -90,6 +90,8 @@ a:hover {
     text-decoration: underline;
 }
 
+
+
 /* HELPER CLASSES */
 .text-centered {
     text-align: center;
@@ -435,3 +437,25 @@ section {
 .toggle-nav[data-navstate="open"] .site-nav .menu-button.navicon::after {
     content: "\2715";
 }
+
+/* SUB PAGES */
+
+article {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article h1,
+article h1 + .subhead, .date {
+    text-align: center;
+}
+
+article h2.subhead {
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.2;
+    opacity: .7;
+}
+
+
