@@ -105,6 +105,11 @@ a:hover {
     margin-right: auto;
 }
 
+.hidden {
+    display: none;
+    border: 1px solid red;
+}
+
 /* IMAGES */
 img {
     max-width: 100%;
