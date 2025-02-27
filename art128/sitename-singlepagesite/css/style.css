@@ -72,6 +72,10 @@ h6 {
     line-height: 1.5; 
 }
 
+h1 .hidden-sm {
+    color: grey;
+}
+
 /* PARAGRAPHS */
 
 p {
