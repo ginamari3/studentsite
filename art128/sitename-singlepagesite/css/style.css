@@ -557,7 +557,3 @@ form input[type="submit"] {
     border-bottom: 3px solid rgba(0,0,0,.2);
 }
 
-.site-header.sticky {
-    position: fixed;
-    width: 100%;
-}
