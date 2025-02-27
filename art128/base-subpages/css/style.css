@@ -137,7 +137,8 @@ img {
 
 /* BUTTONS */
 .button,
-button {
+button,
+form input[type=submit] {
     font-size: inherit;
     line-height: 1; 
     background-color: rgba(0,0,255,1);
@@ -151,7 +152,8 @@ button {
 }
 
 .button:hover,
-button:hover {
+button:hover,
+form input[type=submit]:hover {
     background-color: rgba(0,0,153,1);
     border-color: rgba(0,0,153,1);
     color: rgba(255,255,255,1);
@@ -509,6 +511,7 @@ form textarea {
     box-sizing: border-box;
     display: block;
     width: 100%;
+    font-size: 1em;
 } 
 
 form label {
@@ -516,9 +519,17 @@ form label {
     margin-bottom: 0.25em;
 }
 
-form input, 
+form input [type=text], 
 form textarea {
-    border-color: #ccc; 
+    border: 1px solid #ccc; 
+    padding: .5em;
+    color: #666;
+
+} 
+
+form textarea {
+    min-height: 10em;
+
 } 
 
 form input[type=submit] {
