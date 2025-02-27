@@ -495,3 +495,33 @@ article p:first-of-type:first-letter {
     margin-right: .3em;
     float: left;
 }
+
+/* FORMS */
+
+form {
+    max-width: 600px;
+    margin: 2em auto;
+}
+
+form label, 
+form input, 
+form textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+} 
+
+form label {
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+
+form input, 
+form textarea {
+    border-color: #ccc; 
+} 
+
+form input[type=submit] {
+    margin-top: 1.5em;
+    width: auto;
+}
