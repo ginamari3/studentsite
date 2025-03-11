@@ -1,25 +1,45 @@
 /* GLOBAL RESET */
-* { box-sizing: border-box; }
-body { margin: 0; }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
 
 /* GLOBAL COLORS */
-body { color: rgba(0, 0, 0, 0.8); }
-a { color: rgba(0, 102, 204, 1); }
-a:hover { color: rgba(0, 51, 153, 1); }
+body {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+a {
+    color: rgba(0, 102, 204, 1);
+}
+
+a:hover {
+    color: rgba(0, 51, 153, 1);
+}
 
 /* GLOBAL TYPOGRAPHY */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 88.75%; /* 14px */
-  line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 88.75%;
+    /* 14px */
+    line-height: 1.4;
 }
 
+
+/* REESPONSIVE IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* SITE STRUCTURE */
 
 header {
     background-color: rgba(0, 102, 204, 1);
-    color: rgba(0, 0, 0, 0.8); 
+    color: rgba(0, 0, 0, 0.8);
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -50,14 +70,14 @@ header a:hover {
     list-style: none;
 }
 
-.site-nav  a {
+.site-nav a {
     display: block;
     padding: 1em;
 }
 
 /* MAIN */
 main {
-    background: rgba(0,0,0,.05);
+    background: rgba(0, 0, 0, .05);
 }
 
 /* HERO SECTION */
@@ -93,13 +113,13 @@ main {
     list-style: none;
 }
 
-.courses h3{
+.courses h3 {
     text-align: center;
 }
 
 /* FOOTER */
 footer {
-    border-top: 1px solid rgba(0,0,0,.05);
+    border-top: 1px solid rgba(0, 0, 0, .05);
     padding: 1em;
 }
 
@@ -112,7 +132,7 @@ footer {
     list-style: none;
 }
 
-.social-nav  a {
+.social-nav a {
     display: block;
     padding: 1em;
 }
@@ -130,13 +150,14 @@ section {
 /* SIDEBAR/ASIDE */
 aside {
     padding: 2em 0;
-  }
-  
+}
+
 @media (min-width: 768px) {
     .two-col-sidebar {
         display: grid;
         grid-template-columns: 20em auto;
     }
+
     .two-col-sidebar aside {
         border-right: 1px solid rgba(0, 0, 0, 0.1);
         margin: 0 3em 2em 0;
@@ -146,7 +167,7 @@ aside {
 
 /* SUB PAGES */
 .page-sub .hero {
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.8);
 }
 
@@ -172,7 +193,7 @@ pre code {
     padding: 1em 3em;
     margin-bottom: 1em;
     line-height: 1.5;
-  }
+}
 
 .markup-box {
     border: 1px solid #ddd;
@@ -187,6 +208,7 @@ dt {
     font-weight: bold;
     margin-top: 1em;
 }
+
 dd {
     margin: 0;
 }
