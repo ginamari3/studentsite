@@ -213,6 +213,35 @@ dd {
     margin: 0;
 }
 
+/* CUSTOME HOME PAGE STYLING */
+
+
+.page-home header {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10;
+}
+
+header {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+}
+
+.page-home .hero {
+
+    background-image: url(../img/background\ image.jpg);
+    background-size: cover;
+    background-position: 45% 55%;
+    position: relative;
+    padding: 30vh 1em;
+    background-color: rgba(0, 0, 0, .8);
+
+}
+
 /* FOR DEV PURPOSES */
 /* body * {
     background-color: rgba(0,0,0,.05) !important;
