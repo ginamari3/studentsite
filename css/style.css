@@ -82,7 +82,7 @@ main {
 
 /* HERO SECTION */
 .hero {
-    background-color: rgba(0, 102, 204, 1);
+    /* background-color: rgba(0, 102, 204, 1); */
     text-align: center;
     color: white;
     padding: 6em 1em;
