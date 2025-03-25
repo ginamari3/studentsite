@@ -233,11 +233,11 @@ header {
 
 .page-home .hero {
 
-    background-image: url(../img/blue\ background\ splash.jpg);
+    background-image: url(../img/black\ background.jpg);
     background-size: cover;
-    background-position: 45% 55%;
+    background-position: 15% 85%;
     position: relative;
-    padding: 15vh 1em;
+    padding: 15vh 4em;
     background-color: rgba(0, 0, 0, .8);
 
 }
