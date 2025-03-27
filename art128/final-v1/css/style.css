@@ -394,12 +394,17 @@
      padding: 3em 0;
  }
 
+ .about,
+ .quote {
+     background-color: orange;
+ }
+
  /* HERO */
 
 
  .hero {
      padding: 6em 4%;
-     background-color: rgba(0, 0, 0, .2);
+     /* background-color: rgba(0, 0, 0, .2); */
      text-align: center;
  }
 
@@ -477,7 +482,7 @@
  }
 
  /* STICKY header - works with a class="sticky" on .site-header */
- .site-header.sticky {
+ /* .site-header.sticky {
      position: fixed;
      width: 100%;
      top: 0;
@@ -487,7 +492,7 @@
 
  .site-header.sticky+.site-main {
      padding-top: 3em;
- }
+ } */
 
  /* SUB PAGES */
 
