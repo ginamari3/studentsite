@@ -59,10 +59,12 @@
 
  #rectangle {
      padding: 3em;
-     width: 475px;
+     width: 550px;
      height: 500px;
      background: rgb(231, 231, 232);
      text-align: left;
+     margin-top: 70px;
+
  }
 
  /*    Based on a Traditional Typographic Scale
@@ -406,7 +408,7 @@
      padding: 0;
      list-style: none;
      display: flex;
-     justify-content: center;
+     justify-content: flex-start;
  }
 
  .site-nav a {
