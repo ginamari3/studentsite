@@ -57,8 +57,10 @@
 
  /* HEADINGS */
 
- rectangle.header {
-     background-color: rgb(181, 177, 177);
+ #rectangle {
+     width: 200px;
+     height: 100px;
+     background: blue;
  }
 
  /*    Based on a Traditional Typographic Scale
