@@ -168,11 +168,11 @@
  }
 
  /* 1 WEEK TRIAL BANNER */
- body.demo {
+ body.banner {
      padding-top: 2em;
  }
 
- body.demo::before {
+ body.banner::before {
      content: "Try Free 1 Week Trial!";
      background-color: orange;
      width: 100%;
@@ -185,7 +185,7 @@
  }
 
  @media (min-width: 768px) {
-     body.demo::before {
+     body.banner::before {
          background-color: orange;
          content: "Try Free 1 Week Trial!";
 
@@ -193,14 +193,14 @@
  }
 
  @media (min-width: 1050px) {
-     body.demo::before {
+     body.banner::before {
          background-color: orange;
          content: "Try Free 1 Week Trial!";
      }
  }
 
  @media (min-width: 1250px) {
-     body.demo::before {
+     body.banner::before {
          background-color: orange;
          content: "Try Free 1 Week Trial!";
      }
@@ -292,44 +292,6 @@
      }
  }
 
- /* FOR DEMO PURPOSES ONLY */
- body.demo {
-     padding-top: 2em;
- }
-
- body.demo::before {
-     content: "Small Screen (Mobile) Less Than 780px";
-     background-color: #933;
-     width: 100%;
-     position: fixed;
-     top: 0;
-     text-align: center;
-     color: white;
-     padding: .5em;
-
- }
-
- @media (min-width: 768px) {
-     body.demo::before {
-         background-color: #bcb83d;
-         content: "Midsize (Tablet) Screen 768px - 1050px";
-
-     }
- }
-
- @media (min-width: 1050px) {
-     body.demo::before {
-         background-color: #693;
-         content: "Large (Notebook) Screen 1050px - 1250px ";
-     }
- }
-
- @media (min-width: 1250px) {
-     body.demo::before {
-         background-color: #09c;
-         content: "Extra Large Screen 1250px + ";
-     }
- }
 
  /* SEMANTIC GRID SYSTEM */
  .row>.column {
