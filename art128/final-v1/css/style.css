@@ -56,6 +56,11 @@
  }
 
  /* HEADINGS */
+
+ rectangle.header {
+     background-color: rgb(181, 177, 177);
+ }
+
  /*    Based on a Traditional Typographic Scale
     48, 36, 24, 21, 18, 16
 */
