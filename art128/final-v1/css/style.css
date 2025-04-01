@@ -167,6 +167,46 @@
      }
  }
 
+ /* 1 WEEK TRIAL BANNER */
+ body.demo {
+     padding-top: 2em;
+ }
+
+ body.demo::before {
+     content: "Try Free 1 Week Trial!";
+     background-color: orange;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     text-align: center;
+     color: white;
+     padding: .5em;
+
+ }
+
+ @media (min-width: 768px) {
+     body.demo::before {
+         background-color: orange;
+         content: "Try Free 1 Week Trial!";
+
+     }
+ }
+
+ @media (min-width: 1050px) {
+     body.demo::before {
+         background-color: orange;
+         content: "Try Free 1 Week Trial!";
+     }
+ }
+
+ @media (min-width: 1250px) {
+     body.demo::before {
+         background-color: orange;
+         content: "Try Free 1 Week Trial!";
+     }
+ }
+
+
  /* IMAGES */
  img {
      max-width: 100%;
