@@ -67,6 +67,11 @@
 
  }
 
+ .banner {
+     margin: 10px 20px 30px 40px;
+     /* Top, Right, Bottom, Left */
+ }
+
  /*    Based on a Traditional Typographic Scale
     48, 36, 24, 21, 18, 16
 */
@@ -402,6 +407,7 @@
  }
 
  /* SITE NAV */
+
 
  .site-nav ul {
      margin: 0;
