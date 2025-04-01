@@ -58,9 +58,11 @@
  /* HEADINGS */
 
  #rectangle {
-     width: 200px;
-     height: 100px;
-     background: blue;
+     padding: 3em;
+     width: 475px;
+     height: 500px;
+     background: rgb(231, 231, 232);
+     text-align: left;
  }
 
  /*    Based on a Traditional Typographic Scale
