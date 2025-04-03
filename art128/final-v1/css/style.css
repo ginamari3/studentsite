@@ -68,6 +68,10 @@
 
  }
 
+ .footer-rectangle {
+     background-color: rgb(193, 191, 191);
+ }
+
 
 
  /*    Based on a Traditional Typographic Scale
@@ -113,6 +117,11 @@
      font-size: 1.3125em;
      /* 21px */
      line-height: 1.3;
+     text-align: center;
+ }
+
+ .align-right {
+     text-align: right;
  }
 
  h5 {
