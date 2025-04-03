@@ -428,8 +428,8 @@
      padding: 3em 0;
  }
 
- .about,
- .quote {
+ #about,
+ #quote {
      background-color: orange;
  }
 
