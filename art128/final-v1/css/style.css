@@ -445,7 +445,7 @@
  /* SITE NAV */
 
  .site-header {
-     background: white;
+     background: rgb(241, 241, 241);
      padding: 15px 0;
  }
 
@@ -483,9 +483,9 @@
      padding: 3em 0;
  }
 
- #about,
- #quote {
-     background-color: orange;
+ .about,
+ .quote {
+     background-color: rgb(246, 166, 62);
  }
 
  /* HERO */
