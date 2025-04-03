@@ -424,11 +424,24 @@
 
 
  .site-nav ul {
-     margin: 0;
-     padding: 0;
-     list-style: none;
      display: flex;
-     justify-content: flex-start;
+     justify-content: space-between;
+     /* Pushes elements apart */
+     align-items: center;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .nav-left {
+     display: flex;
+     gap: 20px;
+     /* Adds spacing between items */
+ }
+
+ .nav-right {
+     margin-left: auto;
+     /* Pushes Login to the right */
  }
 
  .site-nav a {
