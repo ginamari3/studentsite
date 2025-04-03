@@ -40,11 +40,9 @@
  /* SET BODY TYPE */
  body {
      font-family: "Lato", sans-serif;
-     font-size: 16px;
+     font-optical-sizing: auto;
      font-weight: 400;
      font-style: normal;
-     line-height: 1.5;
-     color: #333;
  }
 
  /* SET HEADING TYPE */
@@ -59,11 +57,12 @@
 
  /* HEADINGS */
 
- .rectangle {
+ #rectangle {
      padding: 3em;
-     width: 470px;
+     line-height: 2.2em;
+     width: 465px;
      height: 500px;
-     background: rgb(231, 231, 232);
+     background: rgb(241, 241, 241);
      text-align: left;
      margin-top: 70px;
 
@@ -95,12 +94,19 @@
      font-size: 2.25em;
      /* 36px */
      line-height: 1.1;
+     text-align: center;
  }
+
+ .align-left {
+     text-align: left;
+ }
+
 
  h3 {
      font-size: 1.5em;
      /* 24px */
      line-height: 1.2;
+     text-align: center
  }
 
  h4 {
@@ -189,17 +195,14 @@
 
  body.banner::before {
      content: "Try Free 1 Week Trial!";
-     background-color: #FF6B00;
-     /* More accessible orange */
-     color: white;
-     padding: 0.75em;
-     text-align: center;
-     font-weight: bold;
-     display: block;
-     position: sticky;
-     /* Better than fixed for some cases */
+     background-color: orange;
+     width: 100%;
+     position: absolute;
      top: 0;
-     z-index: 1000;
+     text-align: center;
+     color: white;
+     padding: .5em;
+
  }
 
  @media (min-width: 768px) {
@@ -288,7 +291,6 @@
 
  /* MEDIA QUERIES */
  @media (min-width: 768px) {
-     /* was (min-width */
      /* TABLET SIZED STYLING GO HERE */
  }
 
@@ -409,24 +411,6 @@
      margin-bottom: 0;
  }
 
- .hero {
-     position: relative;
-     min-height: 400px;
-     /* Ensure enough space */
-     overflow: hidden;
- }
-
- .hero h1 {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     z-index: 2;
-     width: 90%;
-     /* Prevent overflow */
-     text-align: center;
- }
-
  /* SITE NAV */
 
 
@@ -452,8 +436,8 @@
      padding: 3em 0;
  }
 
- .about,
- .quote {
+ #about,
+ #quote {
      background-color: orange;
  }
 
@@ -666,25 +650,4 @@
      width: 100px;
      margin: .5em auto;
      border-bottom: 3px solid rgba(0, 0, 0, .2);
- }
-
- /* ANIMATION */
-
- .animated {
-     animation-duration: 0.5s;
-     animation-fill-mode: both;
- }
-
- @keyframes fadeIn {
-     from {
-         opacity: 0;
-     }
-
-     to {
-         opacity: 1;
-     }
- }
-
- .fadeIn {
-     animation-name: fadeIn;
  }
