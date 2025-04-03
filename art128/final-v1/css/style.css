@@ -37,26 +37,22 @@
      color: rgba(0, 0, 0, .8);
  } */
 
- /* Change the color of the specified text to orange */
+
+
  .find-your-inner-peace,
- /* Add the class or ID for "Find your inner peace" */
  .our-values,
- /* Add the class or ID for "Our Values" */
  .reviews,
- /* Add the class or ID for "Reviews" */
  .bella-swane,
- /* Add the class or ID for "Bella Swane" */
  .support-hours,
- /* Add the class or ID for "Support Hours" */
  .contact {
-     /* Add the class or ID for "Contact" */
-     color: orange;
+     color: rgb(243, 113, 38);
  }
 
  /* Change the color of the specified text to white */
  .about,
  /* Add the class or ID for "About" */
- .core-power-change {
+ .core-power-change,
+ .quote {
      /* Add the class or ID for "Core power change my life..." */
      color: white;
  }
