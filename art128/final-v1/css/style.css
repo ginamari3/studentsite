@@ -422,7 +422,6 @@
 
  /* SITE NAV */
 
-
  .site-nav ul {
      display: flex;
      justify-content: space-between;
@@ -433,24 +432,25 @@
      width: 100%;
  }
 
- .site-nav li {
-     padding: 10px 20px;
-     /* Adjust spacing */
- }
-
  .nav-left {
-     margin-right: auto;
-     /* Keeps About, Contact, Classes to the left */
+     display: flex;
+     gap: 20px;
+     /* Space between items */
  }
 
  .nav-right {
      margin-left: auto;
-     /* Pushes Login to the far right */
+     /* Pushes 'Login' to the right */
+ }
+
+ .site-nav li {
+     padding: 10px 20px;
  }
 
  .site-nav a {
-     display: block;
-     padding: 1em;
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
  }
 
  .site-nav .menu-button {
