@@ -37,6 +37,32 @@
      color: rgba(0, 0, 0, .8);
  } */
 
+ /* Change the color of the specified text to orange */
+ .find-your-inner-peace,
+ /* Add the class or ID for "Find your inner peace" */
+ .our-values,
+ /* Add the class or ID for "Our Values" */
+ .reviews,
+ /* Add the class or ID for "Reviews" */
+ .bella-swane,
+ /* Add the class or ID for "Bella Swane" */
+ .support-hours,
+ /* Add the class or ID for "Support Hours" */
+ .contact {
+     /* Add the class or ID for "Contact" */
+     color: orange;
+ }
+
+ /* Change the color of the specified text to white */
+ .about,
+ /* Add the class or ID for "About" */
+ .core-power-change {
+     /* Add the class or ID for "Core power change my life..." */
+     color: white;
+ }
+
+
+
  /* SET BODY TYPE */
  body {
      font-family: "Lato", sans-serif;
@@ -422,35 +448,34 @@
 
  /* SITE NAV */
 
- .site-nav ul {
+ .site-header {
+     background: white;
+     padding: 15px 0;
+ }
+
+ .site-nav {
+     flex-grow: 1;
+ }
+
+ .nav-menu {
      display: flex;
-     justify-content: space-between;
-     align-items: center;
      list-style: none;
      padding: 0;
      margin: 0;
-     width: 100%;
  }
 
- .nav-left {
-     display: flex;
-     gap: 20px;
-     /* Space between items */
- }
-
- .nav-right {
-     margin-left: auto;
-     /* Pushes 'Login' to the right */
- }
-
- .site-nav li {
+ .nav-menu li {
      padding: 10px 20px;
  }
 
- .site-nav a {
+ .nav-menu a {
      text-decoration: none;
      color: black;
-     font-weight: bold;
+ }
+
+ .nav-login {
+     margin-left: auto;
+     /* Pushes login to the right */
  }
 
  .site-nav .menu-button {
