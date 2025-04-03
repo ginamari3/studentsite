@@ -426,22 +426,26 @@
  .site-nav ul {
      display: flex;
      justify-content: space-between;
-     /* Pushes elements apart */
      align-items: center;
      list-style: none;
      padding: 0;
      margin: 0;
+     width: 100%;
+ }
+
+ .site-nav li {
+     padding: 10px 20px;
+     /* Adjust spacing */
  }
 
  .nav-left {
-     display: flex;
-     gap: 20px;
-     /* Adds spacing between items */
+     margin-right: auto;
+     /* Keeps About, Contact, Classes to the left */
  }
 
  .nav-right {
      margin-left: auto;
-     /* Pushes Login to the right */
+     /* Pushes Login to the far right */
  }
 
  .site-nav a {
