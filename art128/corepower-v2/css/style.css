@@ -437,6 +437,7 @@
      text-align: center;
  }
 
+
  /* ABOUT US */
  .hero.full-width {
      margin-top: 0;
@@ -481,7 +482,7 @@
 
  /* SECTIONS */
  section {
-     padding: 3em 0;
+     padding: 0.8em 0;
  }
 
  .about,
@@ -701,6 +702,61 @@
  }
 
 
+ /* VALUES */
+ #values .row {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     /* ensures responsive stacking */
+ }
+
+ #values .column {
+     text-align: center;
+ }
+
+ #values h2.values {
+     text-align: center;
+ }
+
+ #values .column {
+     /* display: flex; */
+     justify-content: center;
+ }
+
+ #values p {
+     line-height: 2em;
+ }
+
+
+
+ /* ABOUT */
+ #about .container {
+     text-align: center;
+ }
+
+ #about img {
+     display: block;
+     margin: 0 auto;
+ }
+
+ #about h2 {
+     line-height: 1.3em;
+ }
+
+ #section.about .about {
+     margin: 0px
+ }
+
+ #about p {
+     line-height: 2em;
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 700px;
+     /* keeps paragraph from being too wide */
+
+ }
+
+
  /* POSES */
  #poses .row {
      justify-content: center;
@@ -710,6 +766,7 @@
      display: flex;
      justify-content: center;
  }
+
 
 
  /* CLASSES / INSTRUCTORS / MEMBERSHIP */
@@ -759,15 +816,31 @@
      border-radius: 3px;
  }
 
- /* PREVIEWS */
+ /* REVIEWS */
  #reviews .row {
+     display: flex;
      justify-content: center;
+     flex-wrap: wrap;
+     /* ensures responsive stacking */
  }
 
  #reviews .column {
-     display: flex;
+     text-align: center;
+ }
+
+ #reviews h2.reviews {
+     text-align: center;
+ }
+
+ #reviews .column {
+     /* display: flex; */
      justify-content: center;
  }
+
+ #reviews p {
+     line-height: 2em;
+ }
+
 
  /* FOOTER STYLING */
 
