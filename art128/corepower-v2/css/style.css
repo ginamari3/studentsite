@@ -759,6 +759,16 @@
      border-radius: 3px;
  }
 
+ /* PREVIEWS */
+ #reviews .row {
+     justify-content: center;
+ }
+
+ #reviews .column {
+     display: flex;
+     justify-content: center;
+ }
+
  /* FOOTER STYLING */
 
  .site-footer {
