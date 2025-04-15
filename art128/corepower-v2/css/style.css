@@ -701,6 +701,17 @@
  }
 
 
+ /* POSES */
+ #poses .row {
+     justify-content: center;
+ }
+
+ #poses .column {
+     display: flex;
+     justify-content: center;
+ }
+
+
  /* CLASSES / INSTRUCTORS / MEMBERSHIP */
  #classes .column.one-third {
      /* margin-bottom: 0; */
@@ -716,7 +727,7 @@
      margin-bottom: 0em;
      padding-bottom: 0;
      /* background-color: red; */
-     border-bottom: 6px solid orange;
+     border-bottom: 6px solid rgb(244, 127, 59);
  }
 
  .overlay-container img {
