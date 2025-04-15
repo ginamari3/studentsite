@@ -706,6 +706,8 @@
      position: relative;
      width: 250px;
      height: 250px;
+     text-align: center;
+     margin-bottom: 2em;
  }
 
  .overlay-container img {
@@ -724,4 +726,5 @@
      color: black;
      padding: 1em;
      text-align: center;
+     font-weight: bold;
  }
