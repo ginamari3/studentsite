@@ -312,6 +312,7 @@
      margin: 0;
  }
 
+
  /* CONTAINER */
  .container {
      max-width: 1000px;
@@ -697,4 +698,30 @@
      width: 100px;
      margin: .5em auto;
      border-bottom: 3px solid rgba(0, 0, 0, .2);
+ }
+
+
+ /* CLASSES / INSTRUCTORS / MEMBERSHIP */
+ .overlay-container {
+     position: relative;
+     width: 250px;
+     height: 250px;
+ }
+
+ .overlay-container img {
+     width: 100%;
+     height: auto;
+     display: block;
+ }
+
+ .overlay-box {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     background: rgba(0, 0, 0, 0.6);
+     /* semi-transparent black */
+     color: white;
+     padding: 1em;
+     text-align: center;
  }
