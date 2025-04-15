@@ -464,6 +464,18 @@
 
  .nav-menu li {
      padding: 10px 20px;
+     position: relative;
+ }
+
+ .nav-menu li:not(:last-child)::after {
+     content: "";
+     position: absolute;
+     right: 0;
+     top: 25%;
+     height: 50%;
+     width: 1px;
+     background-color: rgb(244, 127, 59);
+     /* subtle gray divider */
  }
 
  .nav-menu a {
@@ -482,7 +494,7 @@
 
  /* SECTIONS */
  section {
-     padding: 0.8em 0;
+     padding: 1.5em 0;
  }
 
  .about,
@@ -816,6 +828,24 @@
      border-radius: 3px;
  }
 
+ /* QUOTE */
+
+ #quote h2 {
+     max-width: 700px;
+     /* or whatever width fits your layout */
+     margin: 0 auto;
+     text-align: center;
+     line-height: 1.6;
+     /* optional for better spacing */
+ }
+
+ .bella-swane {
+     max-width: 700px;
+     margin: 1em auto 0 auto;
+     text-align: right;
+     font-style: italic;
+ }
+
  /* REVIEWS */
  #reviews .row {
      display: flex;
@@ -833,12 +863,13 @@
  }
 
  #reviews .column {
-     /* display: flex; */
+
      justify-content: center;
  }
 
  #reviews p {
      line-height: 2em;
+     max-width: 260px;
  }
 
 
