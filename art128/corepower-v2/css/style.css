@@ -920,9 +920,10 @@
      /* wider box */
      border-radius: 8px;
      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     line-height: 2rem;
  }
 
- .footer-overlay-box h3 {
+ .footer-overlay-box h4 {
      margin-top: 0;
      color: rgb(244, 127, 59);
  }
@@ -946,13 +947,13 @@
  /* Social icons */
  .footer-social-icons {
      display: flex;
-     list-style: none;
+     justify-content: center;
+     /* centers the icons */
      gap: 1rem;
-     padding: 0;
-     margin: 0;
+     margin-top: 1rem;
  }
 
- .footer-social-icons li img {
-     width: 24px;
-     height: 24px;
+ .footer-social-icons a img {
+     width: 28px;
+     height: 28px;
  }
