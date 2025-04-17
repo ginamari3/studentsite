@@ -910,17 +910,17 @@
  /* white transparent overlay box in top left corner */
  .footer-overlay-box {
      position: absolute;
-     top: 50%;
+     top: 29%;
      left: 2rem;
      transform: translateY(-50%);
-     background-color: rgba(255, 255, 255, 0.9);
+     background-color: rgba(255, 255, 255, 0.719);
      /* white transparency */
      padding: 2rem 2.5rem;
      max-width: 650px;
      /* wider box */
      border-radius: 8px;
      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-     line-height: 2rem;
+     line-height: 2.5rem;
  }
 
  .footer-overlay-box h4 {
