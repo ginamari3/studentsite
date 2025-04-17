@@ -902,15 +902,16 @@
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
-     min-height: 700px;
+     min-height: 990px;
      width: 100%;
      position: relative;
+     border-bottom: 55px solid rgb(244, 127, 59);
  }
 
  /* white transparent overlay box in top left corner */
  .footer-overlay-box {
      position: absolute;
-     top: 29%;
+     top: 21%;
      left: 2rem;
      transform: translateY(-50%);
      background-color: rgba(255, 255, 255, 0.719);
