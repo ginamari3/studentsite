@@ -902,7 +902,7 @@
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
-     min-height: 400px;
+     min-height: 700px;
      width: 100%;
      position: relative;
  }
@@ -916,7 +916,7 @@
      background-color: rgba(255, 255, 255, 0.9);
      /* white transparency */
      padding: 2rem 2.5rem;
-     max-width: 500px;
+     max-width: 650px;
      /* wider box */
      border-radius: 8px;
      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -924,7 +924,7 @@
 
  .footer-overlay-box h3 {
      margin-top: 0;
-     color: rgb(243, 11, 38);
+     color: rgb(244, 127, 59);
  }
 
  .foter-overlay-box address {
