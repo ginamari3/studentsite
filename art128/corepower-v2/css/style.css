@@ -226,7 +226,7 @@
 
  body.banner::before {
      content: "Try Free 1 Week Trial!";
-     background-color: orange;
+     background-color: rgb(243, 113, 38);
      width: 100%;
      position: absolute;
      top: 0;
@@ -238,7 +238,7 @@
 
  @media (min-width: 768px) {
      body.banner::before {
-         background-color: orange;
+         background-color: rgb(243, 113, 38);
          content: "Try Free 1 Week Trial!";
 
      }
@@ -246,14 +246,14 @@
 
  @media (min-width: 1050px) {
      body.banner::before {
-         background-color: orange;
+         background-color: rgb(243, 113, 38);
          content: "Try Free 1 Week Trial!";
      }
  }
 
  @media (min-width: 1250px) {
      body.banner::before {
-         background-color: orange;
+         background-color: rgb(243, 113, 38);
          content: "Try Free 1 Week Trial!";
      }
  }
@@ -406,6 +406,19 @@
      margin: 0;
  }
 
+ .header-image {
+     width: 100%;
+     height: auto;
+     display: block;
+     object-fit: cover;
+     padding: 0;
+     margin: 0;
+ }
+
+ .hero text-centered full-width {
+     padding: 0;
+     margin: 0;
+ }
 
  /* ON LARGER SCREENS PLACE LOGO LEFT AND NAV RIGHT */
  @media (min-width: 768px) {
@@ -493,9 +506,23 @@
  }
 
  /* SECTIONS */
- section {
-     padding: 1.5em 0;
+ .column.one-third {
+     text-align: center;
  }
+
+ .hero {
+     padding: 0;
+     margin: 0;
+     margin-bottom: 0%;
+ }
+
+ .values {
+     padding: 0;
+     margin: 0;
+     margin-bottom: 0%;
+ }
+
+
 
  .about,
  .quote {
@@ -504,9 +531,8 @@
 
  /* HERO */
 
-
  .hero {
-     padding: 1em 4%;
+     /* padding: 1em 4%; */
      /* background-color: rgba(0, 0, 0, .2); */
      text-align: center;
      position: relative;
@@ -744,6 +770,7 @@
  /* ABOUT */
  #about .container {
      text-align: center;
+     padding: .75em 0;
  }
 
  #about img {
@@ -796,7 +823,7 @@
      margin-bottom: 0em;
      padding-bottom: 0;
      /* background-color: red; */
-     border-bottom: 6px solid rgb(244, 127, 59);
+     border-bottom: 9px solid rgb(244, 127, 59);
  }
 
  .overlay-container img {
@@ -829,9 +856,12 @@
  }
 
  /* QUOTE */
+ .quote {
+     padding: 1.5em 0;
+ }
 
  #quote h2 {
-     max-width: 700px;
+     max-width: 950px;
      /* or whatever width fits your layout */
      margin: 0 auto;
      text-align: center;
@@ -847,6 +877,7 @@
  }
 
  /* REVIEWS */
+
  #reviews .row {
      display: flex;
      justify-content: center;
@@ -869,27 +900,11 @@
 
  #reviews p {
      line-height: 2em;
-     max-width: 260px;
+     max-width: 310px;
  }
 
 
  /* FOOTER STYLING */
-
- .site-footer {
-     position: relative;
- }
-
- .footer-bg-image {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     left: 0;
-     border: 5px solid red;
-     z-index: -1;
-
- }
-
  .footer-bg-image img {
      width: 100%;
      height: 100%;
