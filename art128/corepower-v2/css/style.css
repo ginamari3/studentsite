@@ -978,4 +978,83 @@
 
  /* DECOR - HERO SECTION */
 
+ .hero.hero-decor,
+ hero-decor-two,
+ hero-circle-bottom-left {
+     position: relative;
+ }
+
+ .hero-decor img[alt="dashed lines"] {
+     position: absolute;
+     top: 55px;
+     /* adjust this to move it lower */
+     left: 90px;
+ }
+
+
+ .hero-decor-two img[alt="dashed lines"] {
+     position: absolute;
+     top: 585px;
+     /* adjust this to move it lower */
+     left: 250px;
+ }
+
+ .hero-circle-bottom-left img[alt="circle"] {
+     position: absolute;
+     top: 665px;
+     /* adjust this to move it lower */
+     right: 80px;
+ }
+
+ .hero-circle-bottom-left-two img[alt="circle"] {
+     position: absolute;
+     top: 679px;
+     /* adjust this to move it lower */
+     right: 128px;
+ }
+
  /* DECOR - VALUES SECTION */
+ .dashed-lines-left {
+     position: absolute;
+     top: 1450px;
+     /* Move it up/down from the top */
+     left: 20;
+     /* Align left or adjust as needed */
+     z-index: 2;
+ }
+
+ .dashed-lines-left img {
+     height: 250px;
+     width: 4px;
+     display: block;
+ }
+
+ .dashed-lines-right {
+     position: absolute;
+     top: 1550px;
+     /* Move it up/down from the top */
+     right: 20px;
+     /* Align left or adjust as needed */
+     z-index: 2;
+ }
+
+ .dashed-lines-right img {
+     height: 250px;
+     width: 4px;
+     display: block;
+ }
+
+ .circle-left {
+     position: absolute;
+     top: 1750px;
+     /* Move it up/down from the top */
+     left: 20px;
+     /* Align left or adjust as needed */
+     z-index: 2;
+ }
+
+ .circle-left img {
+     height: 50px;
+     width: 50px;
+     display: block;
+ }
