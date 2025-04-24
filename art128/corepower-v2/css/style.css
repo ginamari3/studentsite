@@ -741,6 +741,10 @@
 
 
  /* VALUES */
+ #values {
+     position: relative;
+ }
+
  #values .row {
      display: flex;
      justify-content: center;
@@ -978,6 +982,10 @@
 
  /* DECOR - HERO SECTION */
 
+ .hero {
+     position: relative;
+ }
+
  .hero.hero-decor,
  hero-decor-two,
  hero-circle-bottom-left {
@@ -1013,14 +1021,34 @@
      right: 128px;
  }
 
+ .hero-circle-bottom-left {
+     position: absolute;
+     bottom: 0px;
+     /* adjust this to move it lower */
+     right: 128px;
+ }
+
+ .dashed-circle {
+     width: 100px;
+     height: 100px;
+     border: 1px dashed orange;
+     border-radius: 100%;
+ }
+
  /* DECOR - VALUES SECTION */
  .dashed-lines-left {
      position: absolute;
-     top: 1450px;
+     top: 0px;
      /* Move it up/down from the top */
-     left: 20;
+     left: 20px;
      /* Align left or adjust as needed */
      z-index: 2;
+ }
+
+ .dashed-line-vert {
+     height: 250px;
+     width: 1px;
+     border-left: 1px dashed orange;
  }
 
  .dashed-lines-left img {
@@ -1046,7 +1074,7 @@
 
  .circle-left {
      position: absolute;
-     top: 1750px;
+     top: 1850px;
      /* Move it up/down from the top */
      left: 20px;
      /* Align left or adjust as needed */
@@ -1054,6 +1082,21 @@
  }
 
  .circle-left img {
+     height: 50px;
+     width: 50px;
+     display: block;
+ }
+
+ .circle-value-one {
+     position: absolute;
+     top: 1750px;
+     /* Move it up/down from the top */
+     left: 20px;
+     /* Align left or adjust as needed */
+     z-index: 2;
+ }
+
+ .circle-value-one img {
      height: 50px;
      width: 50px;
      display: block;
