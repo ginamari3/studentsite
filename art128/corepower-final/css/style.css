@@ -1270,11 +1270,11 @@
      position: relative;
  }
 
- #footer .container {
+ /* #footer .container {
      position: relative;
- }
+ } */
 
- .footer-circle-top-left {
+ .footer-overlay-box .footer-circle-top-left {
      position: absolute;
      top: 0px;
      left: 180px;
