@@ -171,12 +171,12 @@
 
  /* LINES */
  a {
-     color: rgba(0, 0, 102, .8);
+     color: rgba(255, 255, 255, 0.8);
      text-decoration: none;
  }
 
  a:hover {
-     color: rgba(0, 0, 102, 1);
+     color: rgb(219, 152, 35);
      text-decoration: underline;
  }
 
@@ -417,6 +417,12 @@
  .hero.text-centered.full-width {
      padding: 0;
      margin: 0;
+     color: white;
+ }
+
+ .hero h1 a {
+     color: white !important;
+     text-decoration: none;
  }
 
  /* ON LARGER SCREENS PLACE LOGO LEFT AND NAV RIGHT */
