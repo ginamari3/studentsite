@@ -986,10 +986,19 @@
      position: relative;
  }
 
- .hero.hero-decor,
- hero-decor-two,
- hero-circle-bottom-left {
+ .hero .container {
      position: relative;
+ }
+
+ .hero .hero-decor,
+ .hero .hero-decor-two,
+ .hero .hero-circle-bottom-left {
+     position: relative;
+ }
+
+ .hero-circle-bottom-right,
+ .hero-circle-bottom-right-small {
+     position: absolute;
  }
 
  .hero-decor img[alt="dashed lines"] {
@@ -1004,36 +1013,35 @@
      position: absolute;
      top: 585px;
      /* adjust this to move it lower */
-     left: 250px;
+     left: 90px;
  }
 
- .hero-circle-bottom-left img[alt="circle"] {
+ .hero-circle-bottom-right img[alt="circle"] {
      position: absolute;
-     top: 665px;
+     bottom: 20px;
      /* adjust this to move it lower */
-     right: 80px;
+     left: 80px;
  }
 
- .hero-circle-bottom-left-two img[alt="circle"] {
+ .hero-circle-bottom-right-small img[alt="small circle"] {
      position: absolute;
-     top: 679px;
+     bottom: 20px;
      /* adjust this to move it lower */
-     right: 128px;
+     right: 98px;
  }
 
- .hero-circle-bottom-left {
+ .hero-circle-bottom-right {
      position: absolute;
      bottom: 0px;
-     /* adjust this to move it lower */
-     right: 128px;
+     right: 90px;
  }
 
- .dashed-circle {
+ /* .dashed-circle {
      width: 100px;
      height: 100px;
      border: 1px dashed orange;
      border-radius: 100%;
- }
+ } */
 
  /* DECOR - VALUES SECTION */
  .dashed-lines-left {
@@ -1059,11 +1067,11 @@
 
  .dashed-lines-right {
      position: absolute;
-     top: 1550px;
+     top: 20px;
      /* Move it up/down from the top */
-     right: 20px;
+     right: 290px;
      /* Align left or adjust as needed */
-     z-index: 2;
+     /* z-index: 2; */
  }
 
  .dashed-lines-right img {
@@ -1074,9 +1082,10 @@
 
  .circle-right {
      position: absolute;
-     top: 1850px;
+     /* top: 1850px; */
+     bottom: 20px;
      /* Move it up/down from the top */
-     left: 20px;
+     left: 0;
      /* Align left or adjust as needed */
      z-index: 2;
  }
