@@ -774,7 +774,7 @@
  /* ABOUT */
  #about .container {
      text-align: center;
-     padding: .75em 0;
+     padding: 2em 0;
  }
 
  #about img {
@@ -803,6 +803,10 @@
  /* POSES */
  #poses .row {
      justify-content: center;
+ }
+
+ #poses .container {
+     padding: 4.5em;
  }
 
  #poses .column {
@@ -1034,7 +1038,7 @@
      position: absolute;
      top: 0px;
      /* Move it up/down from the top */
-     left: 290px;
+     left: 250px;
      /* Align left or adjust as needed */
      z-index: 2;
  }
@@ -1050,7 +1054,7 @@
      position: absolute;
      top: 90px;
      /* Move it up/down from the top */
-     right: 290px;
+     right: 250px;
      /* Align left or adjust as needed */
      /* z-index: 2; */
  }
@@ -1083,34 +1087,89 @@
      position: relative;
  }
 
- .about-dashed-lines-left {
+ .about-dashed-line-left {
      position: absolute;
-     top: 0px;
+     top: 65px;
      /* Move it up/down from the top */
-     left: 290px;
+     left: 20px;
      /* Align left or adjust as needed */
-     z-index: 2;
+     /* z-index: 2; */
  }
 
- .about-dashed-lines-right {
+ .about-dashed-line-left img {
+     height: 250px;
+     width: 4px;
+     display: block;
+ }
+
+ .about-dashed-line-right {
      position: absolute;
-     top: 0px;
+     top: 205px;
      /* Move it up/down from the top */
-     right: 290px;
+     right: 20px;
      /* Align left or adjust as needed */
-     z-index: 2;
+     /* z-index: 2; */
+ }
+
+ .about-dashed-line-right img {
+     height: 250px;
+     width: 4px;
+     display: block;
  }
 
  .about-circle-top-right {
      position: absolute;
      top: 0px;
-     right: 290px;
+     right: 20px;
  }
 
  .about-circle-bottom-left {
      position: absolute;
+     bottom: 0px;
+     left: 20px;
+ }
+
+ /* DECOR - POSES SECTION */
+
+ .poses {
+     position: relative;
+ }
+
+ .poses .container {
+     position: relative;
+ }
+
+ .pose-dashed-circle-left {
+     position: absolute;
+     bottom: 0px;
+     /* Move it up/down from the top */
+     left: 20px;
+     /* Align left or adjust as needed */
+     /* z-index: 2; */
+ }
+
+ .pose-circle-top-right {
+     position: absolute;
      top: 0px;
-     left: 290px;
+     /* Move it up/down from the top */
+     right: 20px;
+     /* Align left or adjust as needed */
+     /* z-index: 2; */
+ }
+
+ .pose-dashed-line-right {
+     position: absolute;
+     top: 65px;
+     /* Move it up/down from the top */
+     right: 20px;
+     /* Align left or adjust as needed */
+     /* z-index: 2; */
+ }
+
+ .pose-dashed-line-right img {
+     height: 250px;
+     width: 4px;
+     display: block;
  }
 
  /* CSS SHAPES */
