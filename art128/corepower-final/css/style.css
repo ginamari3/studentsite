@@ -471,7 +471,7 @@
  .nav-menu {
      display: flex;
      list-style: none;
-     padding: 0;
+     padding: .25em;
      margin: 0;
  }
 
@@ -990,74 +990,55 @@
      position: relative;
  }
 
- /* .hero .hero-decor,
- .hero .hero-decor-two,
- .hero .hero-circle-bottom-left {
-     position: relative;
- } */
-
- /* .hero-circle-bottom-right,
- .hero-circle-bottom-right-small {
-     position: absolute;
- } */
-
  .hero-decor {
      position: absolute;
-     top: 55px;
+     top: 35px;
      /* adjust this to move it lower */
-     left: 90px;
+     left: 67px;
  }
 
 
  .hero-decor-two {
      position: absolute;
-     bottom: 100px;
+     bottom: 145px;
      /* adjust this to move it lower */
-     left: 100px;
+     left: 230px;
  }
 
- .hero-circle-bottom-right img[alt="circle"] {
+ .hero-circle-bottom-right-small {
      position: absolute;
-     bottom: 20px;
+     bottom: 0px;
      /* adjust this to move it lower */
-     left: 80px;
- }
-
- .hero-circle-bottom-right-small img[alt="small circle"] {
-     position: absolute;
-     bottom: 20px;
-     /* adjust this to move it lower */
-     right: 98px;
+     right: 150px;
  }
 
  .hero-circle-bottom-right {
      position: absolute;
+     display: block;
      bottom: 0px;
-     right: 90px;
+     right: 110px;
  }
 
- /* .dashed-circle {
-     width: 100px;
-     height: 100px;
-     border: 1px dashed orange;
-     border-radius: 100%;
- } */
 
  /* DECOR - VALUES SECTION */
+
+ .values {
+     position: relative;
+ }
+
+ .values .container {
+     position: relative;
+ }
+
  .dashed-lines-left {
      position: absolute;
      top: 0px;
      /* Move it up/down from the top */
-     left: 20px;
+     left: 290px;
      /* Align left or adjust as needed */
      z-index: 2;
  }
 
- .dashed-line-vert {
-     height: 250px;
-     width: 1px;
-     border-left: 1px dashed orange;
- }
 
  .dashed-lines-left img {
      height: 250px;
@@ -1067,7 +1048,7 @@
 
  .dashed-lines-right {
      position: absolute;
-     top: 20px;
+     top: 90px;
      /* Move it up/down from the top */
      right: 290px;
      /* Align left or adjust as needed */
@@ -1080,18 +1061,72 @@
      display: block;
  }
 
- .circle-right {
+ .values-circle-bottom-left {
      position: absolute;
-     /* top: 1850px; */
-     bottom: 20px;
-     /* Move it up/down from the top */
-     left: 0;
-     /* Align left or adjust as needed */
-     z-index: 2;
+     bottom: 15px;
+     left: 290px;
  }
 
- .circle-right img {
+ .values-circle-bottom-left img {
      height: 50px;
      width: 50px;
      display: block;
  }
+
+ /* DECOR - ABOUT SECTION */
+
+ .about {
+     position: relative;
+ }
+
+ .about .container {
+     position: relative;
+ }
+
+ .about-dashed-lines-left {
+     position: absolute;
+     top: 0px;
+     /* Move it up/down from the top */
+     left: 290px;
+     /* Align left or adjust as needed */
+     z-index: 2;
+ }
+
+ .about-dashed-lines-right {
+     position: absolute;
+     top: 0px;
+     /* Move it up/down from the top */
+     right: 290px;
+     /* Align left or adjust as needed */
+     z-index: 2;
+ }
+
+ .about-circle-top-right {
+     position: absolute;
+     top: 0px;
+     right: 290px;
+ }
+
+ .about-circle-bottom-left {
+     position: absolute;
+     top: 0px;
+     left: 290px;
+ }
+
+ /* CSS SHAPES */
+
+ /* .dashed-circle {
+     width: 90px;
+     height: 90px;
+     border: 1px orange;
+     border-radius: 100%;
+ } */
+
+ /* .dashed-circle {
+     width: 90px;
+     height: 90px;
+     border: 1px orange;
+     border-radius: 100%;
+ } 
+     
+ CREATE DIV CLASS */
