@@ -1200,6 +1200,33 @@
      /* z-index: 2; */
  }
 
+ /* DECOR - QUOTE SECTION */
+
+ #quote {
+     position: relative;
+ }
+
+ #quote .container {
+     position: relative;
+ }
+
+ .quote-circle-left {
+     position: absolute;
+     top: 175px;
+     /* Move it up/down from the top */
+     left: 20px;
+     /* Align left or adjust as needed */
+     /* z-index: 2; */
+ }
+
+ .quote-circle-right {
+     position: absolute;
+     top: 250px;
+     /* Move it up/down from the top */
+     right: 20px;
+     /* Align left or adjust as needed */
+     /* z-index: 2; */
+ }
 
  /* CSS SHAPES */
 
