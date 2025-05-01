@@ -239,7 +239,6 @@
  @media (min-width: 768px) {
      body.banner::before {
          background-color: rgb(243, 113, 38);
-         content: "Try Free 1 Week Trial!";
 
      }
  }
@@ -415,7 +414,7 @@
      margin: 0;
  }
 
- .hero text-centered full-width {
+ .hero.text-centered.full-width {
      padding: 0;
      margin: 0;
  }
@@ -518,7 +517,7 @@
 
  .values {
      padding: 0;
-     margin: 0;
+     margin: 1em 0;
      margin-bottom: 0%;
  }
 
@@ -893,6 +892,10 @@
 
  /* REVIEWS */
 
+ .reviews {
+     padding: 4.5em 0;
+ }
+
  #reviews .row {
      display: flex;
      justify-content: center;
@@ -959,7 +962,7 @@
      color: rgb(244, 127, 59);
  }
 
- .foter-overlay-box address {
+ .footer-overlay-box address {
      font-style: normal;
      line-height: 1.6;
      margin-bottom: 1rem;
@@ -1044,12 +1047,8 @@
  .dashed-lines-left {
      position: absolute;
      top: 0px;
-     /* Move it up/down from the top */
-     left: 250px;
-     /* Align left or adjust as needed */
-     z-index: 2;
+     left: 20px;
  }
-
 
  .dashed-lines-left img {
      height: 250px;
@@ -1060,10 +1059,7 @@
  .dashed-lines-right {
      position: absolute;
      top: 90px;
-     /* Move it up/down from the top */
-     right: 250px;
-     /* Align left or adjust as needed */
-     /* z-index: 2; */
+     right: 20px;
  }
 
  .dashed-lines-right img {
@@ -1285,21 +1281,3 @@
      top: 0px;
      right: 200px;
  }
-
- /* CSS SHAPES */
-
- /* .dashed-circle {
-     width: 90px;
-     height: 90px;
-     border: 1px orange;
-     border-radius: 100%;
- } */
-
- /* .dashed-circle {
-     width: 90px;
-     height: 90px;
-     border: 1px orange;
-     border-radius: 100%;
- } 
-     
- CREATE DIV CLASS */
