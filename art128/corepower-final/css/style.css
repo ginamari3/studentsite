@@ -529,6 +529,8 @@
      background-color: rgb(246, 166, 62);
  }
 
+
+
  /* HERO */
 
  .hero {
@@ -817,6 +819,11 @@
 
 
  /* CLASSES / INSTRUCTORS / MEMBERSHIP */
+ #classes {
+     padding: 2em;
+ }
+
+
  #classes .column.one-third {
      /* margin-bottom: 0; */
      /* override default spacing if any */
@@ -865,7 +872,7 @@
 
  /* QUOTE */
  .quote {
-     padding: 1.5em 0;
+     padding: 4.5em 0;
  }
 
  #quote h2 {
@@ -1212,7 +1219,8 @@
 
  .quote-circle-left {
      position: absolute;
-     top: 175px;
+     top: 0px;
+     bottom: 0px;
      /* Move it up/down from the top */
      left: 20px;
      /* Align left or adjust as needed */
@@ -1221,11 +1229,39 @@
 
  .quote-circle-right {
      position: absolute;
-     top: 250px;
+     top: 50px;
      /* Move it up/down from the top */
      right: 20px;
      /* Align left or adjust as needed */
      /* z-index: 2; */
+ }
+
+ /* DECOR - REVIEWS SECTION */
+
+ #reviews {
+     position: relative;
+ }
+
+ #reviews .container {
+     position: relative;
+ }
+
+ .reviews-circle-mid {
+     position: absolute;
+     top: 0px;
+     right: 120px;
+ }
+
+ .reviews-dashed-line-left {
+     position: absolute;
+     top: 30px;
+     left: 20px;
+ }
+
+ .reviews-dashed-line-right {
+     position: absolute;
+     bottom: 20px;
+     right: 20px;
  }
 
  /* CSS SHAPES */
