@@ -1274,16 +1274,16 @@
      position: relative;
  } */
 
- .footer-overlay-box .footer-circle-top-left {
+ .footer-circle-top-left {
      position: absolute;
      top: 0px;
-     left: 180px;
+     left: 130px;
  }
 
  .footer-circle-top-right {
      position: absolute;
      top: 0px;
-     right: 180px;
+     right: 200px;
  }
 
  /* CSS SHAPES */
