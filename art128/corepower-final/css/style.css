@@ -1249,7 +1249,7 @@
  .reviews-circle-mid {
      position: absolute;
      top: 0px;
-     right: 120px;
+     right: 380px;
  }
 
  .reviews-dashed-line-left {
@@ -1262,6 +1262,28 @@
      position: absolute;
      bottom: 20px;
      right: 20px;
+ }
+
+ /* DECOR - FOOTER SECTION */
+
+ #footer {
+     position: relative;
+ }
+
+ #footer .container {
+     position: relative;
+ }
+
+ .footer-circle-top-left {
+     position: absolute;
+     top: 0px;
+     left: 180px;
+ }
+
+ .footer-circle-top-right {
+     position: absolute;
+     top: 0px;
+     right: 180px;
  }
 
  /* CSS SHAPES */
