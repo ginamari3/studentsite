@@ -1131,46 +1131,75 @@
 
  /* DECOR - POSES SECTION */
 
- .poses {
+ #poses {
      position: relative;
  }
 
- .poses .container {
+ #poses .container {
      position: relative;
  }
 
- .pose-dashed-circle-left {
+ .poses-dashed-circle-left img {
      position: absolute;
-     bottom: 0px;
+     bottom: 5px;
+     /* Move it up/down from the top */
+     left: 65px;
+     /* Align left or adjust as needed */
+     /* z-index: 2; */
+ }
+
+ .poses-circle-top-right img {
+     position: absolute;
+     top: 53px;
+     /* Move it up/down from the top */
+     right: 40px;
+     /* Align left or adjust as needed */
+     /* z-index: 2; */
+ }
+
+ .poses-dashed-line-right img {
+     position: absolute;
+     top: 105px;
+     /* Move it up/down from the top */
+     right: 20px;
+     /* Align left or adjust as needed */
+     /* z-index: 2; */
+ }
+
+ .poses-dashed-line-right img {
+     height: 250px;
+     width: 4px;
+     display: block;
+ }
+
+ /* DECOR - CLASSES SECTION */
+
+ #classes {
+     position: relative;
+ }
+
+ #classes .container {
+     position: relative;
+ }
+
+ .classes-dashed-line-left {
+     position: absolute;
+     top: 175px;
      /* Move it up/down from the top */
      left: 20px;
      /* Align left or adjust as needed */
      /* z-index: 2; */
  }
 
- .pose-circle-top-right {
+ .classes-circle-right {
      position: absolute;
-     top: 0px;
+     bottom: 0px;
      /* Move it up/down from the top */
      right: 20px;
      /* Align left or adjust as needed */
      /* z-index: 2; */
  }
 
- .pose-dashed-line-right {
-     position: absolute;
-     top: 65px;
-     /* Move it up/down from the top */
-     right: 20px;
-     /* Align left or adjust as needed */
-     /* z-index: 2; */
- }
-
- .pose-dashed-line-right img {
-     height: 250px;
-     width: 4px;
-     display: block;
- }
 
  /* CSS SHAPES */
 
