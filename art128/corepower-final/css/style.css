@@ -990,18 +990,18 @@
      position: relative;
  }
 
- .hero .hero-decor,
+ /* .hero .hero-decor,
  .hero .hero-decor-two,
  .hero .hero-circle-bottom-left {
      position: relative;
- }
+ } */
 
- .hero-circle-bottom-right,
+ /* .hero-circle-bottom-right,
  .hero-circle-bottom-right-small {
      position: absolute;
- }
+ } */
 
- .hero-decor img[alt="dashed lines"] {
+ .hero-decor {
      position: absolute;
      top: 55px;
      /* adjust this to move it lower */
@@ -1009,11 +1009,11 @@
  }
 
 
- .hero-decor-two img[alt="dashed lines"] {
+ .hero-decor-two {
      position: absolute;
-     top: 585px;
+     bottom: 100px;
      /* adjust this to move it lower */
-     left: 90px;
+     left: 100px;
  }
 
  .hero-circle-bottom-right img[alt="circle"] {
