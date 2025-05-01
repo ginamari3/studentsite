@@ -885,7 +885,8 @@
  /* REVIEWS */
 
  .reviews {
-     padding: 1.5em 0;
+     padding: 0;
+     margin: 1.85em;
  }
 
  #reviews .row {
