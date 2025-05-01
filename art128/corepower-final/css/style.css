@@ -409,6 +409,7 @@
  /* SITE HEADER */
  .site-header {
      margin: 0;
+     padding: .5em 0;
  }
 
  .header-image {
@@ -432,13 +433,14 @@
  }
 
  /* ON LARGER SCREENS PLACE LOGO LEFT AND NAV RIGHT */
- @media (min-width: 768px) {
-     .site-header .container {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-     }
+ /* @media (min-width: 768px) { */
+ .site-header .container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
  }
+
+ /* } */
 
  /* STYLING FOR BOTH HEADER AND FOOTER */
  .site-header a,
@@ -472,7 +474,7 @@
 
  .site-header {
      background: rgb(241, 241, 241);
-     padding: 2px 0;
+     padding: 20px 0;
  }
 
  .site-nav {
@@ -481,6 +483,7 @@
 
  .nav-menu {
      display: flex;
+     flex-wrap: wrap;
      list-style: none;
      padding: .25em;
      margin: 0;
@@ -491,16 +494,20 @@
      position: relative;
  }
 
- .nav-menu li:not(:last-child)::after {
+ .nav-menu li:not(:last-child):not(:first-child)::after {
      content: "";
      position: absolute;
-     right: 0;
+     left: 0;
      top: 25%;
      height: 50%;
      width: 1px;
      background-color: rgb(244, 127, 59);
      /* subtle gray divider */
  }
+
+ /* .nav-menu li:first-child::after {
+     display: none;
+ } */
 
  .nav-menu a {
      text-decoration: none;
@@ -525,6 +532,7 @@
      padding: 0;
      margin: 0;
      margin-bottom: 0%;
+     max-height: 100svh;
  }
 
  .values {
@@ -547,6 +555,7 @@
      /* background-color: rgba(0, 0, 0, .2); */
      text-align: center;
      position: relative;
+     overflow: hidden;
  }
 
  .hero h1 {
@@ -560,6 +569,13 @@
  .hero h1 a {
      color: white;
      text-decoration: none;
+ }
+
+ .hero img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+
  }
 
  /* TOGGLE NAV */
