@@ -41,11 +41,19 @@
 
  .find-your-inner-peace,
  .our-values,
- .reviews,
  .bella-swane,
  .support-hours,
  .contact {
      color: rgb(243, 113, 38);
+ }
+
+ h2.reviews {
+     color: rgb(243, 113, 38);
+ }
+
+ #reviews h3,
+ #reviews p {
+     color: black;
  }
 
  /* Change the color of the specified text to white */
@@ -174,7 +182,7 @@
  }
 
  a:hover {
-     color: rgb(219, 152, 35);
+     color: rgb(0, 0, 0);
      text-decoration: underline;
  }
 
@@ -877,7 +885,7 @@
  /* REVIEWS */
 
  .reviews {
-     padding: 4.5em 0;
+     padding: 1.5em 0;
  }
 
  #reviews .row {
