@@ -420,7 +420,7 @@
      color: white;
  }
 
- .hero h1 a {
+ #hero h1 a {
      color: white !important;
      text-decoration: none;
  }
