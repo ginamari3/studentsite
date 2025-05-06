@@ -1023,23 +1023,23 @@
 
  .hero-decor-two {
      position: absolute;
-     bottom: 145px;
+     bottom: 85px;
      /* adjust this to move it lower */
-     left: 230px;
+     left: 120px;
  }
 
  .hero-circle-bottom-right-small {
      position: absolute;
      bottom: 0px;
      /* adjust this to move it lower */
-     right: 150px;
+     right: 53px;
  }
 
  .hero-circle-bottom-right {
      position: absolute;
      display: block;
      bottom: 0px;
-     right: 110px;
+     right: 5px;
  }
 
 
