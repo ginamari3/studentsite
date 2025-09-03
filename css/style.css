@@ -147,6 +147,23 @@ section {
     padding: 3em 1em;
 }
 
+.class-project {
+    margin: 0 auto;
+    max-width: 600px;
+    /* or whatever width looks good */
+    text-align: center;
+}
+
+.class-project ul {
+    padding-left: 1.25rem;
+    margin: 0;
+    list-style-position: inside;
+}
+
+/* .class-project li {
+    margin: 0.25rem 0;
+} */
+
 /* SIDEBAR/ASIDE */
 aside {
     padding: 2em 0;
