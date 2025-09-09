@@ -80,11 +80,14 @@ main {
     background: rgba(0, 0, 0, .05);
 }
 
-a[href] “#” {
+a[href="#"]:link,
+a[href="#"]:visited {
     color: grey;
     text-decoration: none;
     cursor: default;
 }
+
+
 
 /* HERO SECTION */
 .hero {
