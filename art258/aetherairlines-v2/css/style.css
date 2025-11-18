@@ -1,1 +1,2444 @@
+/* --------------------
+TABLE OF CONTENTS 
+# GLOBALS
+# LAYOUT
+# SITE STRUCTURE
+# UI COMPONENTS
+# CUSTOM SITE STYLING (OPINIONATED)
+# ANIMATIONS
+# FLIGHT SEARCH BAR (static UI)
+# SECTIONS (Members, Destinations, Flight Detail, Quote, Booking, Journeys)
+# UTILITIES
+# MEDIA QUERIES
+# FOOTER (moved to very bottom)
+----------------------- */
 
+/* ------------------
+        GLOBALS 
+--------------------- */
+
+/* css/style.css
+   Aether Airlines — luxury minimal, off-white background
+*/
+
+/* ========== VARIABLES ========== */
+:root {
+    --bg: #f8f8f5;
+    /* off-white main background */
+    --card: #ffffff;
+    --text-dark: #0b1220;
+    --muted: #6b7482;
+    --primary: #16204d;
+    /* deep navy */
+    --primary-600: #243c7a;
+    --accent: #f4c95d;
+    /* soft gold */
+    --radius-lg: 20px;
+    --container: 1100px;
+    --gap: 1.25rem;
+    --shadow: 0 8px 24px rgba(11, 35, 64, 0.06);
+    --card-shadow: 0 6px 18px rgba(11, 35, 64, 0.05);
+    --padding: 40px;
+
+    /* local accent for search UI details */
+    --teal-acc: #2b89a8;
+    /* caret / swap arrows */
+}
+
+/* ========== GLOBAL ========== */
+/* ======================
+   FONT STYLES & SIZES
+====================== */
+
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+/* H1 - Bold */
+h1 {
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 64px);
+    line-height: 1.1;
+}
+
+/* H2 - Bold (match H1 family) */
+h2 {
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 36px);
+    line-height: 1.2;
+    text-wrap: pretty;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Normalize heading and paragraph spacing for these sections */
+.aether-memberships h2,
+.top-destinations h2 {
+    margin-bottom: clamp(12px, 1.6vw, 24px);
+    /* same as rest of site */
+}
+
+.aether-memberships p,
+.top-destinations p {
+    margin-top: 0;
+    margin-bottom: clamp(24px, 2vw, 36px);
+}
+
+section {
+    padding: clamp(40px, 6vw, 80px) 0;
+}
+
+.aether-memberships,
+.top-destinations {
+    padding: clamp(40px, 6vw, 80px) 0;
+    /* ensures consistent vertical spacing */
+}
+
+
+
+/* Buttons - Helvetica Neue Regular 18/20pt */
+.btn {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/* Flight Search Engine uses Lato */
+.search-card,
+.ab-search,
+.ab-card,
+.ab-iata,
+.ab-controls {
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Exact sizes per spec */
+.ab-code {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+/* e.g., HNL */
+.ab-cities {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* small labels */
+.ab-options-title,
+.ab-check {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-dark);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+}
+
+/* container */
+.container {
+    max-width: var(--container);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+
+}
+
+
+
+/* Scale the site on wide desktops so content doesn’t feel small */
+@media (min-width: 1280px) {
+    :root {
+        --container: 1240px;
+    }
+}
+
+@media (min-width: 1536px) {
+    :root {
+        --container: 1340px;
+    }
+}
+
+/* UTIL */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.primary1 {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(22, 32, 77, 0.12);
+}
+
+.btn.primary1:hover {
+    background: rgba(255, 255, 255, 0.777);
+    color: #5e5e5e;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(22, 32, 77, 0.12);
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid rgba(22, 32, 77, 0.06);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid rgba(22, 32, 77, 0.08);
+}
+
+.section-sub {
+    color: var(--muted);
+    margin: 0 0 1rem 0;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* centers all navbar content as a group */
+    padding: 10px 1rem;
+    max-width: var(--container);
+    /* align with main content */
+    margin: 0 auto;
+    box-shadow: 0 1px 6px rgba(11, 35, 64, 0.04);
+    background: transparent;
+    flex-wrap: nowrap;
+    gap: 16px;
+    /* balanced global gap between sections */
+}
+
+/* Logo spacing */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.logo img {
+    display: block;
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 18px;
+    /* tighter spacing */
+    list-style: none;
+    margin: 0 12px;
+    flex: 1 1 auto;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 400;
+    padding: 6px 6px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(22, 32, 77, 0.04);
+}
+
+/* Search + Signup container */
+.search-signup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: auto;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+/* Search box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #e8e8e8;
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 6px 4px;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Signup button */
+.signup-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.signup-btn:hover {
+    filter: brightness(.95);
+}
+
+/* Menu toggle (mobile only) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 760px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 16px;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Desktop: show links inline with comfy spacing (kept inline for <=760px) */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    /* Mobile: when menu is opened, stack with larger gaps */
+    .navbar.active .nav-links {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+
+    .search-signup {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+    }
+}
+
+/* ========== HERO ========== */
+.hero {
+    position: relative;
+    min-height: 70vh;
+    background-color: #081531;
+
+    /* ORDER: top → bottom */
+    background-image:
+        linear-gradient(180deg, rgba(8, 21, 49, 0.10), rgba(8, 21, 49, 0.10)),
+        /* overlay */
+        url('../img/2-1-header-mountainbg.jpg');
+    /* mountain */
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: cover, cover, 400px;
+    background-position: center, center, bottom right;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    padding: clamp(56px, 6vw, 96px) 0;
+    overflow: hidden;
+}
+
+/* stars image */
+.hero-stars {
+    position: absolute;
+    top: 50%;
+    bottom: clamp(8px, 2vw, 24px);
+    right: clamp(8px, 2vw, 24px);
+    transform: translateY(-50%);
+    width: clamp(156px, 23.4vw, 390px);
+    /* +30% larger */
+    height: auto;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+
+@media (max-width: 420px) {
+    .hero-stars {
+        top: 55%;
+        width: clamp(120px, 38vw, 240px);
+        opacity: .85;
+    }
+}
+
+.hero::before {
+    display: none;
+}
+
+/* Inner container */
+.hero-inner {
+    position: relative;
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 1.5rem;
+    gap: 2rem;
+}
+
+/* Pronunciation */
+.pronounce {
+    align-self: center;
+    position: relative;
+    top: -25%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+.pronounce {
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .85);
+    margin: 0 0 8px 0;
+}
+
+/* Headline + subhead */
+.hero-content h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 64px);
+    line-height: 1.1;
+    margin: 0.5rem 0;
+    color: #fff;
+    text-align: left;
+}
+
+.lead {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 2vw, 24px);
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+/* search card (generic) */
+.search-card {
+    background: var(--card);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: end;
+}
+
+.search-card .field-row {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px
+}
+
+.search-card label {
+    font-size: .75rem;
+    color: var(--muted);
+    margin-bottom: 6px
+}
+
+.search-card input,
+.search-card select {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(11, 35, 64, 0.06);
+    outline: none;
+    font-size: .95rem;
+}
+
+/* ========== MEMBERSHIPS, DESTINATIONS, FEATURES, QUOTE, BOOKING, JOURNEYS ========== */
+
+/* MEMBERSHIPS */
+.memberships {
+    padding: 0 var(--padding) !important;
+}
+
+.membership-cards {
+    display: flex;
+    gap: 16px;
+}
+
+#memberships .center {
+    margin-top: 1rem;
+}
+
+@media (max-width: 760px) {
+    #memberships .center {
+        margin-top: 2rem;
+    }
+}
+
+/* Global base card rule — width animation only */
+.m-card {
+    flex: 1 0 0;
+    /* grow=1, basis=0 => smooth reflow */
+    min-width: 0;
+    transition: flex-grow .35s ease;
+    cursor: pointer;
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 400px;
+    position: relative;
+    box-shadow: var(--card-shadow);
+    display: flex;
+}
+
+.m-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.m-card .m-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px;
+    z-index: 2;
+    color: #fff;
+}
+
+.m-card .m-overlay::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 7px;
+    background: rgba(24, 24, 24, 0.396);
+    z-index: -1;
+}
+
+.m-card.active {
+    flex-grow: 2.2;
+}
+
+.m-card:not(.active) {
+    filter: grayscale(.08) brightness(.95);
+}
+
+/* DESTINATIONS */
+.destinations {
+    position: relative;
+    background: #c7cce1;
+    background-size: cover;
+    border-radius: 38px;
+    /* was 30px */
+    padding: 75px 50px;
+    /* was 60px 40px */
+    margin: 60px 0;
+    /* max-width: var(--container); */
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+
+
+.destinations .view-more {
+    margin-top: 14px;
+    /* keep if you like this spacing */
+    display: inline-block;
+    /* make sure transform works cleanly */
+    transform: translateY(25%);
+}
+
+
+
+.dest-header {
+    text-align: left !important;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.destinations .dest-header .section-title,
+.destinations .dest-header .section-sub {
+    color: #0b1220;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.destinations::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.1) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.destinations> :not(.cloud-divider) {
+    position: relative;
+    z-index: 1;
+}
+
+.destinations .center {
+    margin-top: 16px;
+}
+
+.destinations .view-more {
+    margin-top: -20px;
+}
+
+.destinations .carousel-wrap {
+    padding-bottom: 6px;
+}
+
+.destinations .carousel-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.destinations .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.destinations .carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.d-card {
+    flex: 0 0 auto;
+    width: 240px;
+    height: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #fff, #fbfdff);
+    box-shadow: var(--card-shadow);
+}
+
+.d-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.d-title {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(11, 35, 64, 0.5);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.scroll-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(36, 60, 122, 0.12);
+}
+
+.scroll-btn:hover {
+    transform: translateY(-2px);
+}
+
+.destinations .center {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .destinations {
+        border-radius: 20px;
+        padding: 40px 20px;
+    }
+}
+
+/* (shared carousel classes) */
+.carousel-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.d-card {
+    flex: 0 0 auto;
+    width: 240px;
+    height: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #fff, #fbfdff);
+    box-shadow: var(--card-shadow);
+}
+
+.d-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.d-title {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(11, 35, 64, 0.5);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: .95rem;
+}
+
+.scroll-btn {
+    width: 44px;
+    height: 30px;
+    border-radius: 999px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(36, 60, 122, 0.12);
+}
+
+.scroll-btn:hover {
+    transform: translateY(-2px);
+}
+
+.view-more {
+    margin-top: 14px;
+}
+
+.features {
+    padding: 48px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.feature {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+.feature h3 {
+    margin: 0 0 8px 0;
+}
+
+/* ========== FLIGHT DETAIL ========== */
+.flight-detail {
+    position: relative;
+    padding: clamp(40px, 6vw, 80px) 0;
+    overflow: visible;
+    /* was hidden; needs to be visible for overlap */
+}
+
+.flight-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    column-gap: clamp(12px, 2vw, 24px);
+    /* space between intro + features */
+    row-gap: clamp(24px, 4vw, 48px);
+    /* vertical spacing on mobile */
+    align-items: start;
+    padding-inline: var(--padding);
+}
+
+
+@media (max-width: 900px) {
+    .flight-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.flight-detail-intro h2 {
+    font-weight: 700;
+    font-size: clamp(2rem, 4.6vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+}
+
+.flight-detail-intro p {
+    max-width: 46ch;
+    color: var(--text-dark);
+}
+
+.flight-detail-features {
+    display: grid;
+    gap: 18px;
+}
+
+.fd-card {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 16px;
+    align-items: center;
+    background: #ffffff74;
+    color: #000000;
+    border-radius: 22px;
+    box-shadow: 0 10px 18px rgba(11, 35, 64, .08);
+    padding: 18px;
+}
+
+.fd-icon {
+    position: relative;
+    width: 84px;
+    height: 84px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #ececf5a1;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06);
+}
+
+.fd-icon img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: inherit;
+}
+
+.fd-text h3 {
+    font-weight: 700;
+    font-size: clamp(1.15rem, 2.2vw, 24px);
+    margin: 0 0 6px 0;
+}
+
+.fd-text p {
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+
+/* Idle-until-scroll */
+.flight-detail .flight-detail-intro h2,
+.flight-detail .flight-detail-intro p,
+.flight-detail .fd-card {
+    opacity: 0;
+    transform: translateY(10px);
+    will-change: transform, opacity;
+}
+
+.flight-detail.in-view .flight-detail-intro h2 {
+    animation: fdSlide .55s ease forwards;
+}
+
+.flight-detail.in-view .flight-detail-intro p {
+    animation: fdSlide .55s ease .12s forwards;
+}
+
+.flight-detail.in-view .flight-detail-features .fd-card {
+    animation: fdFade .6s ease forwards;
+}
+
+.flight-detail.in-view .flight-detail-features .fd-card:nth-child(1) {
+    animation-delay: .10s;
+}
+
+.flight-detail.in-view .flight-detail-features .fd-card:nth-child(2) {
+    animation-delay: .25s;
+}
+
+.flight-detail.in-view .flight-detail-features .fd-card:nth-child(3) {
+    animation-delay: .40s;
+}
+
+@keyframes fdFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fdSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .flight-detail .flight-detail-intro h2,
+    .flight-detail .flight-detail-intro p,
+    .flight-detail .fd-card {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* =========================
+   FLIGHT DETAIL — PLANES
+   default positions + slide-in from left on scroll
+========================= */
+
+.flight-detail-intro {
+    position: relative;
+}
+
+/* keep copy above planes if desired */
+.flight-detail-intro h2,
+.flight-detail-intro p {
+    position: relative;
+    z-index: 1;
+}
+
+/* base */
+
+.airplane-1 {
+    height: auto;
+    max-width: 400px;
+}
+
+.airplane-2 {
+    height: auto;
+    max-width: 500px;
+}
+
+.airplane-1,
+.airplane-2 {
+    position: absolute;
+    pointer-events: none;
+    /* keeps them responsive but not huge */
+    width: auto;
+    /* respect intrinsic width (default size) */
+    opacity: 0;
+    /* hidden until revealed */
+    will-change: transform, opacity;
+    transition: transform .9s ease-out, opacity .9s ease-out;
+    filter: drop-shadow(0 8px 18px rgba(11, 35, 64, .12));
+    z-index: 0;
+}
+
+/* DEFAULT / ORIGIN POSITIONS
+   - airplane-1 (light blue): centered in the intro at 50% / 50%
+   - airplane-2 (dark blue): 30% to the LEFT of airplane-1, same vertical center
+*/
+.airplane-1 {
+    top: 130%;
+    left: 69%;
+    transform: translate(-50%, -50%) translateX(-60vw);
+    /* start off-screen left */
+}
+
+.airplane-2 {
+    top: 150%;
+    left: calc(50% - 30%);
+    /* 30% of container width left of the center */
+    transform: translate(-50%, -50%) translateX(-60vw);
+    /* start off-screen left */
+}
+
+/* REVEAL ON SCROLL (when .flight-detail gets .in-view) */
+.flight-detail.in-view .airplane-1,
+.flight-detail.in-view .airplane-2 {
+    opacity: 1;
+}
+
+/* slide each to its default/origin transform (remove the -60vw push) */
+.flight-detail.in-view .airplane-1 {
+    transform: translate(-50%, -50%);
+    transition-delay: .80s;
+    /* subtle lead-in */
+}
+
+.flight-detail.in-view .airplane-2 {
+    transform: translate(-50%, -50%);
+    transition-delay: .132s;
+    /* slightly after plane 1 */
+}
+
+/* mobile sizing guardrails */
+@media (max-width: 700px) {
+
+    .airplane-1,
+    .airplane-2 {
+        max-width: 70vw;
+    }
+}
+
+/* a11y: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .airplane-1,
+    .airplane-2 {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: translate(-50%, -50%) !important;
+    }
+}
+
+/* SEATTLE SKYLINE positioning & layering */
+.seattle-skyline {
+    position: absolute;
+    right: 270px;
+    /* nudge beyond the container to the right */
+    bottom: -46%;
+    /* anchor vertically around mid of flight-detail */
+    transform: translateY(-30%) translateX(40px);
+    /* start slightly off-canvas for anim */
+    width: min(54.6vw, 756px);
+    /* 25% smaller */
+    /* responsive width cap */
+    height: auto;
+    opacity: 0;
+    /* fade in on scroll */
+    pointer-events: none;
+    z-index: 1;
+    /* below the quote (which is z-index: 3) */
+    filter: drop-shadow(0 10px 18px rgba(11, 35, 64, .08));
+    will-change: transform, opacity;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* When flight-detail is in view, reveal the skyline at its resting spot */
+.flight-detail.in-view .seattle-skyline {
+    opacity: 1;
+    transform: translateY(-30%) translateX(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .seattle-skyline {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: translateY(-30%) !important;
+    }
+}
+
+/* Mobile guardrails */
+@media (max-width: 900px) {
+    .seattle-skyline {
+        right: -10vw;
+        width: min(70vw, 520px);
+        transform: translateY(-20%) translateX(20px);
+    }
+}
+
+@media (max-width: 640px) {
+    .seattle-skyline {
+        display: none;
+        /* optional: hide if it crowds small screens */
+    }
+}
+
+/* ========== QUOTE ========== */
+:root {
+    --quote-bg: #cbd0e3;
+    --quote-text: #0b1220;
+    --quote-radius: 28px;
+    --quote-pad: clamp(24px, 5vw, 72px);
+    /* base padding */
+    --quote-mark-size: clamp(40px, 10vw, 120px);
+}
+
+.quote {
+    margin-top: calc(clamp(28px, 4vw, 56px) * 1.25);
+    padding: calc(clamp(28px, 4vw, 56px) * 1.25) 0;
+    position: relative;
+    z-index: 3;
+    /* higher than the skyline */
+}
+
+.quote .quote-card {
+    position: relative;
+    background: var(--quote-bg);
+    color: var(--quote-text);
+    border-radius: var(--quote-radius);
+    padding: var(--quote-pad) var(--padding);
+    padding-left: calc(20% + var(--quote-mark-size)*0.5);
+    padding-right: calc(var(--quote-mark-size)*0.5);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.quote .quote-card::before,
+.quote .quote-card::after {
+    position: absolute;
+    font-family: Georgia, serif, "Playfair Display";
+    font-weight: 700;
+    line-height: 1;
+    color: var(--quote-text);
+    opacity: .9;
+    z-index: 0;
+    pointer-events: none;
+    font-size: var(--quote-mark-size);
+}
+
+.quote .quote-card::before {
+    content: "“";
+    top: clamp(8px, 1.6vw, 16px);
+    left: calc(clamp(12px, 2vw, 24px) * 9);
+}
+
+.quote .quote-card::after {
+    content: "”";
+    bottom: clamp(8px, 1.6vw, 16px);
+    right: calc(clamp(12px, 2vw, 24px) * 9);
+}
+
+
+.q-text {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    text-align: left;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 5.6vw, 4.25rem);
+    line-height: 1.15;
+}
+
+.q-cite {
+    position: relative;
+    left: -20%;
+    z-index: 1;
+    transform: translateY(30%);
+    display: block;
+    margin-top: clamp(12px, 1.8vw, 20px);
+    padding-right: calc(var(--quote-mark-size)*0.6);
+    text-align: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: clamp(.9rem, 1.6vw, 1.1rem);
+    color: rgba(11, 18, 32, .85);
+    font-style: normal;
+}
+
+@media (max-width:420px) {
+    :root {
+        --quote-mark-size: clamp(36px, 18vw, 72px);
+    }
+
+    .q-cite {
+        padding-right: calc(var(--quote-mark-size)*0.7);
+    }
+}
+
+/* ========== BOOKING MADE EASY ========== */
+.booking-made {
+    padding: clamp(40px, 6vw, 80px) 0;
+}
+
+.bm-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    column-gap: clamp(12px, 2vw, 28px);
+    /* space between left + right */
+    row-gap: clamp(24px, 4vw, 40px);
+    /* vertical spacing when stacked */
+    align-items: start;
+    padding: 0 var(--padding);
+}
+
+
+.bm-left {
+    display: grid;
+    gap: 18px;
+}
+
+.bm-card {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    align-items: center;
+    gap: 16px;
+    background: #ffffff74;
+    color: #000000;
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: 0 10px 18px rgba(11, 35, 64, .08);
+}
+
+.bm-icon {
+    position: relative;
+    width: 84px;
+    height: 84px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #ececf5a1;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06);
+}
+
+.bm-icon img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.bm-text h4 {
+    margin: 0 0 6px 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.15rem, 2.2vw, 24px);
+    line-height: 1.2;
+}
+
+.bm-text p {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+.bm-right {
+    position: relative;
+    min-height: 320px;
+}
+
+.bm-right h2 {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: clamp(1.8rem, 4.6vw, 2.6rem);
+    line-height: 1.1;
+    margin: 0 0 .5rem 0;
+}
+
+.bm-lead {
+    margin: 0 0 18px 0;
+    color: var(--text-dark);
+    max-width: 40ch;
+}
+
+.bm-cta {
+    margin-top: 25px;
+    border-radius: 999px;
+    padding: 12px 22px;
+    box-shadow: 0 8px 18px rgba(36, 60, 122, .18), 0 6px 0 rgba(0, 0, 0, .10);
+}
+
+/* =========================
+   BOOKING MADE EASY — Bird Mark scroll animation
+========================= */
+
+/* Starting state */
+.bm-mark {
+    position: absolute;
+    right: 0;
+    bottom: -30%;
+    width: min(44.2%, 289px);
+    height: auto;
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    will-change: transform, opacity;
+    transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+    pointer-events: none;
+}
+
+/* Reveal when section in-view (already triggered by JS) */
+.booking-made.in-view .bm-mark {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: 0.35s;
+    /* optional delay for smooth layering */
+}
+
+/* Optional: subtle float / parallax effect for extra depth */
+@keyframes birdFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.02);
+    }
+}
+
+.booking-made.in-view .bm-mark.float {
+    animation: birdFloat 6s ease-in-out infinite;
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .bm-mark {
+        transition: none !important;
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+
+@media (max-width: 980px) {
+    .bm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bm-right {
+        order: -1;
+        min-height: 0;
+    }
+
+    .bm-mark {
+        display: none;
+    }
+}
+
+/* Idle-until-scroll */
+.bm-card,
+.bm-right h2,
+.bm-right .bm-lead,
+.bm-right .bm-cta {
+    opacity: 0;
+    transform: translateY(10px);
+    will-change: transform, opacity;
+}
+
+.booking-made.in-view .bm-card {
+    animation: bmFade .6s ease forwards;
+}
+
+.booking-made.in-view .bm-card:nth-child(1) {
+    animation-delay: .10s;
+}
+
+.booking-made.in-view .bm-card:nth-child(2) {
+    animation-delay: .25s;
+}
+
+.booking-made.in-view .bm-card:nth-child(3) {
+    animation-delay: .40s;
+}
+
+.booking-made.in-view .bm-right h2,
+.booking-made.in-view .bm-right .bm-lead,
+.booking-made.in-view .bm-right .bm-cta {
+    transform: translateX(10px);
+    animation: bmSlide .5s ease forwards;
+}
+
+.booking-made.in-view .bm-right h2 {
+    animation-delay: .15s;
+}
+
+.booking-made.in-view .bm-right .bm-lead {
+    animation-delay: .30s;
+}
+
+.booking-made.in-view .bm-right .bm-cta {
+    animation-delay: .45s;
+}
+
+@keyframes bmFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bmSlide {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .bm-card,
+    .bm-right h2,
+    .bm-right .bm-lead,
+    .bm-right .bm-cta {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ========== STORIES (placeholder styles kept) ========== */
+.stories {
+    padding: 48px 0;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.story blockquote {
+    background: var(--primary-600);
+    color: #fff;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.story .meta {
+    margin-top: 8px;
+    color: var(--muted);
+}
+
+/* ========== AB SEARCH (below hero) ========== */
+.ab-search {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    margin-top: -165px !important;
+    /* roughly 70% more upward than -40px */
+    /* slight overlap */
+    z-index: 5;
+}
+
+@media (max-width: 760px) {
+    .ab-search {
+        margin-top: 12px;
+    }
+}
+
+.ab-card {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid rgba(11, 35, 64, 0.08);
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(11, 35, 64, 0.08);
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.ab-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: clamp(20px, 2vw, 36px);
+    align-items: end;
+    padding: clamp(18px, 2vw, 40px);
+}
+
+.ab-iata {
+    display: grid;
+    gap: 8px;
+}
+
+.ab-iata-row {
+    display: grid;
+    grid-template-columns: auto 44px auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.ab-code {
+    font-weight: 400;
+    font-size: clamp(36px, 4.2vw, 56px);
+    letter-spacing: .03em;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+.ab-swap {
+    display: grid;
+    place-items: center;
+}
+
+.ab-swap svg {
+    width: 28px;
+    height: 28px;
+}
+
+.ab-swap svg path {
+    stroke: var(--teal-acc);
+    stroke-width: 1.8;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ab-cities {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--muted);
+    padding: 2px 6px 0;
+}
+
+.ab-controls {
+    display: grid;
+    grid-template-columns: auto auto auto 1fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.ab-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid #0f172a;
+    font-size: clamp(18px, 1rem + 0.7vw, 22px);
+    font-weight: 450;
+    white-space: nowrap;
+    color: var(--text-dark);
+}
+
+.ab-caret {
+    color: var(--teal-acc);
+    font-weight: 900;
+}
+
+.ab-tab-dates .ab-dash {
+    margin: 0 8px;
+}
+
+.ab-tab-dates .ab-cal {
+    font-size: 18px;
+    margin-left: 10px;
+    color: #374151;
+}
+
+.ab-btn-search {
+    justify-self: end;
+    background: var(--primary);
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    height: clamp(46px, 4.2vw, 52px);
+    padding: 0 clamp(22px, 2vw, 34px);
+    font-size: clamp(18px, 1rem + 0.4vw, 20px);
+    font-weight: 700;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, .10), 0 8px 18px rgba(0, 0, 0, .12);
+    cursor: default;
+}
+
+.ab-options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(16px, 2vw, 28px);
+    border-top: 1px solid rgba(11, 35, 64, 0.08);
+    padding: 14px clamp(22px, 3vw, 40px) 22px;
+}
+
+.ab-options-title {
+    font-size: 14px;
+    letter-spacing: .06em;
+    color: #5b6577;
+}
+
+.ab-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #464f60;
+}
+
+.ab-check input {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 980px) {
+    .ab-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ab-controls {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .ab-btn-search {
+        grid-column: 2/3;
+        justify-self: end;
+    }
+}
+
+@media (max-width: 640px) {
+    .ab-controls {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .ab-btn-search {
+        grid-column: 1/2;
+        justify-self: start;
+    }
+}
+
+/* ==== CLOUDS — SCROLL-REVEAL ==== */
+
+
+
+#memberships,
+#destinations {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+#memberships .cta {
+    transform: translateY(25%);
+}
+
+
+.cloud-divider {
+    position: absolute !important;
+    right: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    pointer-events: none;
+    transform-origin: center;
+    transform: translateX(100px) scale(0.75);
+    opacity: 0;
+    z-index: 1;
+}
+
+@keyframes cloudSlideIn {
+    0% {
+        transform: translateX(100px) scale(0.75);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) scale(0.75);
+        opacity: 1;
+    }
+}
+
+#memberships.in-view .cloud-divider,
+#destinations.in-view .cloud-divider {
+    animation: cloudSlideIn 1.2s ease-out forwards;
+}
+
+#memberships.in-view .cloud-1 {
+    bottom: -90px !important;
+    right: 290px !important;
+    animation-delay: 0.2s;
+}
+
+#memberships.in-view .cloud-2 {
+    bottom: -120px !important;
+    right: 90px !important;
+    animation-delay: 0.8s;
+}
+
+#memberships.in-view .cloud-3 {
+    bottom: -90px !important;
+    right: -120px !important;
+    animation-delay: 1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    #memberships .cloud-divider,
+    #destinations .cloud-divider {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: translateX(0) scale(0.75) !important;
+    }
+}
+
+@media (max-width: 760px) {
+
+    #memberships .cloud-divider,
+    #destinations .cloud-divider {
+        z-index: 0 !important;
+        /* behind content */
+        transform: translateX(40%) scale(0.6) !important;
+        /*  ^ pushes cloud toward the right side without touching the edge */
+
+        left: 50% !important;
+        /* anchor cloud in the middle */
+        right: auto !important;
+        /* prevents sticking to browser wall */
+
+        bottom: -50px !important;
+        /* adjust vertical position */
+        opacity: 0.4 !important;
+        /* softer background */
+    }
+
+    /* ensure section content stays above clouds */
+    #memberships>*:not(.cloud-divider),
+    #destinations>*:not(.cloud-divider) {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+
+
+
+
+/* === FORCE H1 + H3 TO MATCH (place last before sections) === */
+h1,
+h3,
+.m-card .m-overlay h3,
+/* membership cards */
+.booking-card h3,
+/* booking card */
+.feature h3,
+/* features grid */
+.stories h3
+
+/* stories section */
+    {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+}
+
+h3 {
+    font-size: clamp(1.125rem, 1.6vw, 22px) !important;
+    line-height: 1.25 !important;
+    margin: 0 0 .25rem 0 !important;
+}
+
+/* ===== Journeys ===== */
+.journeys {
+    padding: calc(clamp(28px, 4vw, 56px) * 1.25) 0;
+}
+
+.journeys-wrap {
+    background: #cbd0e3;
+    border-radius: 30px;
+    padding: clamp(24px, 4vw, 64px) calc(var(--padding) * 1.25);
+    box-shadow: var(--card-shadow);
+    position: relative;
+}
+
+.journeys-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4.6vw, 2.6rem);
+    line-height: 1.1;
+    color: var(--text-dark);
+    margin: 0 0 clamp(20px, 3vw, 32px) 0;
+}
+
+.t-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(18px, 3vw, 40px);
+    align-items: start;
+}
+
+.t-card {
+    border-radius: 22px;
+    padding: clamp(18px, 2.6vw, 28px);
+    box-shadow: 0 10px 18px rgba(11, 35, 64, .12);
+    display: grid;
+    gap: clamp(16px, 2vw, 22px);
+}
+
+.t-card--dark {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 10px 18px rgba(11, 35, 64, .25);
+}
+
+.t-card--light {
+    background: #fff;
+    color: var(--text-dark);
+    box-shadow: 0 12px 22px rgba(11, 35, 64, .12);
+}
+
+.t-quote {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    line-height: 1.6;
+    color: currentColor;
+}
+
+.t-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: clamp(6px, 1vw, 10px);
+}
+
+.t-avatar {
+    width: clamp(56px, 6.5vw, 72px);
+    height: clamp(56px, 6.5vw, 72px);
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background: #e9e9ef;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .05);
+}
+
+.t-name {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.25;
+    color: currentColor;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+}
+
+.t-name span {
+    font-weight: 400;
+    opacity: .9;
+}
+
+.t-cta {
+    margin-top: clamp(18px, 3vw, 26px);
+    border-radius: 999px;
+    padding: 12px 24px;
+    box-shadow: 0 10px 18px rgba(11, 35, 64, .18), 0 6px 0 rgba(0, 0, 0, .10);
+}
+
+/* Journeys reveal */
+#journeys .journeys-title,
+#journeys .t-card,
+#journeys .t-cta {
+    opacity: 0;
+    transform: translateY(10px);
+    will-change: opacity, transform;
+}
+
+#journeys.in-view .journeys-title {
+    animation: jSlide .55s ease forwards;
+}
+
+#journeys.in-view .t-card {
+    animation: jFade .6s ease forwards;
+}
+
+#journeys.in-view .t-card:nth-child(1) {
+    animation-delay: .12s;
+}
+
+/* left card */
+#journeys.in-view .t-card:nth-child(2) {
+    animation-delay: .28s;
+}
+
+/* right card */
+#journeys.in-view .t-cta {
+    animation: jSlide .5s ease .42s forwards;
+}
+
+@keyframes jFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes jSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    #journeys .journeys-title,
+    #journeys .t-card,
+    #journeys .t-cta {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* --- Move 'Book Your Next Journey' button down by 45% --- */
+.t-cta {
+    transform: translateY(45%);
+}
+
+
+/* ========== RESPONSIVE LAYOUT HELPERS (non-footer) ========== */
+@media (max-width: 980px) {
+    .hero-inner {
+        grid-template-columns: 1fr 320px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin: 10px 0;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+    }
+
+    .search-signup {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .hero-aside {
+        order: 2;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .search-card {
+        width: 100%;
+    }
+
+    .membership-cards {
+        display: flex;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .m-card {
+        flex: 1 0 0;
+        transition: flex-grow .35s ease !important;
+        will-change: flex-grow;
+    }
+
+    .m-card.active {
+        flex-grow: 2.2;
+    }
+
+    .m-card:not(.active) {
+        filter: grayscale(.08) brightness(.95);
+    }
+
+    .m-card.swapping {
+        transition: none !important;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking {
+        grid-template-columns: 1fr;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Collapsible search behaviour on very small screens */
+@media (max-width: 500px) {
+    .search-box input {
+        width: 0;
+        padding: 0;
+        transition: width .28s ease, padding .28s ease;
+        overflow: hidden;
+    }
+
+    .search-box.active input {
+        width: 140px;
+        padding: 6px;
+    }
+
+    .search-box {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .search-btn {
+        font-size: 18px;
+    }
+}
+
+/* Accessibility helper */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* safety: avoid accidental horizontal scroll from other elements */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* (Keep .full-bleed utility for other areas; footer overrides below) */
+.full-bleed {
+    --bleed: calc(50vw - 50%);
+    margin-inline: calc(-1 * var(--bleed));
+    padding-inline: max(1rem, var(--bleed));
+}
+
+/* =========================
+   FOOTER (all styles moved to bottom)
+========================= */
+
+/* Final, guaranteed full-bleed footer using a 100vw pseudo background */
+.site-footer {
+    position: relative;
+    isolation: isolate;
+    /* keep ::before behind content */
+    color: #e9eef7;
+    border-top: none;
+    padding-block: clamp(40px, 6vw, 80px) 32px;
+    overflow: hidden;
+    /* hides any bleed artifacts */
+}
+
+/* Prevent the .full-bleed utility from fighting the pseudo background on the footer */
+.site-footer.full-bleed {
+    margin-inline: 0;
+    padding-inline: 0;
+}
+
+/* Full-viewport background layer */
+.site-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    width: 100vw;
+    /* span the whole viewport width */
+    transform: translateX(-50%);
+    /* center the 100vw strip */
+    background: var(--primary);
+    /* your navy */
+    z-index: -1;
+    /* sit behind footer content */
+}
+
+/* Keep inner content aligned to your container width */
+.footer-inner,
+.footer-bottom {
+    max-width: var(--container);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Grid layout for main footer row */
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    gap: clamp(18px, 2.5vw, 28px);
+    align-items: start;
+}
+
+/* Brand */
+.f-logo {
+    margin: 0 0 10px 0;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.f-logo-big {
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: clamp(28px, 4.4vw, 48px);
+    letter-spacing: 0.06em;
+    margin-left: auto;
+    /* centers block horizontally if max-width applies */
+    margin-right: auto;
+    /* centers block horizontally if max-width applies */
+}
+
+.f-logo-small {
+    display: block;
+    margin-top: 4px;
+    font-weight: 700;
+    font-size: clamp(10px, 1.1vw, 14px);
+    letter-spacing: 0.18em;
+
+}
+
+.f-tag {
+    margin: 14px 0 28px;
+    color: rgba(255, 255, 255, .85);
+    font-size: clamp(0.75rem, 1.1vw, 0.85rem);
+    /* ~30% smaller */
+    max-width: 28ch;
+    text-align: center;
+    /* centers the text */
+    margin-left: auto;
+    /* centers block horizontally if max-width applies */
+    margin-right: auto;
+    /* centers block horizontally if max-width applies */
+}
+
+
+
+.f-mark {
+    width: clamp(80px, 18vw, 120px);
+    height: auto;
+    opacity: .9;
+}
+
+/* Columns */
+.f-col h4,
+.f-news h4 {
+    margin: 0 0 12px 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
+}
+
+.f-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.f-links a {
+    color: rgba(255, 255, 255, .9);
+    text-decoration: none;
+}
+
+.f-links a:hover {
+    text-decoration: underline;
+}
+
+/* Newsletter */
+.f-news .newsletter {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: center;
+    background: rgba(255, 255, 255, .15);
+    padding: 6px;
+    border-radius: 999px;
+    width: min(360px, 100%);
+}
+
+.f-news .newsletter input {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: rgba(255, 255, 255, .85);
+    color: #0b1220;
+    padding: 12px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.f-news .newsletter input::placeholder {
+    color: #6b7482;
+}
+
+.f-news .newsletter button {
+    border: 0;
+    background: #e6e9f2;
+    color: #0b1220;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.f-news .newsletter button:hover {
+    filter: brightness(.95);
+}
+
+/* Social */
+.f-social {
+    margin-top: 18px;
+}
+
+.f-social h5 {
+    margin: 0 0 10px 0;
+    font-size: .95rem;
+    color: rgba(255, 255, 255, .92);
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .3);
+    overflow: hidden;
+    transition: background .25s ease, transform .25s ease;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, .25);
+    transform: translateY(-2px);
+}
+
+.icon-btn img {
+    width: 36px;
+    height: 36px;
+    object-fit: fill;
+    display: block;
+}
+
+/* Bottom row */
+.footer-bottom {
+    margin-top: clamp(16px, 3vw, 24px);
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    padding-top: 16px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, .8);
+    font-size: .9rem;
+}
+
+/* Footer responsiveness */
+@media (max-width: 980px) {
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Tighter overall vertical rhythm (~40% smaller than current spacing) --- */
+
+/* Headings ↔ paragraphs within sections */
+:root {
+    --h2-space: clamp(3px, 0.5vw, 7px);
+    --p-space: clamp(6px, 0.6vw, 10px);
+}
+
+/* Aether Memberships */
+#memberships .section-title {
+    margin-bottom: var(--h2-space) !important;
+}
+
+#memberships .section-sub {
+    margin-top: 0 !important;
+    margin-bottom: var(--p-space) !important;
+}
+
+/* Top Destinations */
+#destinations .dest-header .section-title {
+    margin-bottom: var(--h2-space) !important;
+}
+
+#destinations .dest-header .section-sub {
+    margin-top: 0 !important;
+    margin-bottom: var(--p-space) !important;
+}
+
+/* Reduce vertical gap between Destinations → Flight Detail */
+.destinations {
+    margin-bottom: 80px !important;
+    /* was 33px */
+    padding-bottom: 80px !important;
+    /* was 33px */
+}
+
+.flight-detail {
+    padding-top: clamp(13px, 2vw, 26px) !important;
+    /* tighter top padding */
+}
+
+/* Reduce overall spacing between Hero → Search → Memberships */
+.hero {
+    padding-bottom: clamp(14px, 1.8vw, 26px) !important;
+    /* was 24–44px */
+}
+
+#memberships,
+.memberships {
+    padding-top: clamp(10px, 1.6vw, 22px) !important;
+    /* was 18–36px */
+}
+
+/* Optional: pull the flight search bar slightly higher */
+.ab-search {
+    margin-top: -130px !important;
+    /* was -68px; moves bar upward a bit more */
+}
+
+/* --- Move Aether Memberships & Top Destinations upward by ~35% --- */
+#memberships,
+.memberships {
+    margin-top: -35px !important;
+    /* visually pulls memberships upward */
+}
+
+#destinations,
+.destinations {
+    margin-top: -35px !important;
+    /* visually pulls destinations upward */
+}
+
+@media (max-width: 760px) {
+
+    #memberships,
+    .memberships,
+    #destinations,
+    .destinations {
+        margin-top: -20px !important;
+    }
+}
