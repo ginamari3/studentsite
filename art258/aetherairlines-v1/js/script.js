@@ -1,4 +1,3 @@
-
 /* js/script.js
    - mobile menu toggle
    - collapsing search on small screens
