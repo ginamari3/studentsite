@@ -1,1 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aether Airlines — Home</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION (integrated from your provided markup) -->
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo">
+                <img src="../aetherairlines-v1/img/1-navbar-blue-title-logo.jpg" height="50" width="130"
+                    alt="Aether Airlines Logo" />
+            </div>
+
+            <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a role="menuitem" href="#booking">Book</a></li>
+                <li role="none"><a role="menuitem" href="#destinations">Destinations</a></li>
+                <li role="none"><a role="menuitem" href="#mytrips">My Trips</a></li>
+            </ul>
+
+            <div class="search-signup">
+                <div class="search-box" aria-hidden="false">
+                    <input type="text" aria-label="Search destinations" placeholder="Search destinations" />
+                    <button class="search-btn" aria-label="Search">🔍</button>
+                </div>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero">
+            <div class="hero-inner container">
+                <p class="pronounce">/ˈiːθər/ (pronounced “Ay-thur”)</p>
+                <div class="hero-content">
+
+                    <h1>Crafted comfort, <br> elevated Service</h1>
+                    <p class="lead">Luxury airline that enhances every detail</p>
+                    <div class="hero-actions">
+                        <a class="btn primary1" href="#booking">Plan Your Trip</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ⭐ Stars overlay image -->
+            <img class="hero-stars" src="../aetherairlines-v1/img/2-4-2-header-stars.png" height="300" width="300"
+                alt="Stars overlay">
+
+
+            <!-- (Optional) remove this whole aside; hero now a clean banner -->
+            <aside class="hero-aside"></aside>
+        </section>
+
+
+
+        <!-- FLIGHT SEARCH BAR (static, responsive) — now BELOW the hero -->
+        <section class="ab-search">
+            <div class="container">
+                <div class="ab-card" aria-label="Flight search">
+                    <div class="ab-grid">
+                        <!-- LEFT: HNL ↔ TO (1/3) -->
+                        <div class="ab-iata">
+                            <div class="ab-iata-row">
+                                <div class="ab-code">HNL</div>
+                                <div class="ab-swap" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M7 7h11m0 0-3-3m3 3-3 3M17 17H6m0 0 3-3m-3 3 3 3" />
+                                    </svg>
+                                </div>
+                                <div class="ab-code">TO</div>
+                            </div>
+                            <div class="ab-cities">
+                                <span>Honolulu, HI</span>
+                                <span>Your Destination</span>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT: Tabs + Search (2/3) -->
+                        <nav class="ab-controls" aria-label="Flight search controls">
+                            <div class="ab-tab">Round Trip <span class="ab-caret">v</span></div>
+                            <div class="ab-tab ab-tab-dates">
+                                Depart <span class="ab-dash">—</span> Return
+                                <span class="ab-cal" aria-hidden="true"><img
+                                        src="../aetherairlines-v1/img/2-5-header-calender-icon.png"
+                                        alt="Calendar Icon"></span>
+                            </div>
+                            <div class="ab-tab">1 Passenger <span class="ab-caret">v</span></div>
+                            <button class="ab-btn-search" type="button" aria-label="Search">Search</button>
+                        </nav>
+                    </div>
+
+                    <!-- SEARCH OPTIONS (inside the same card) -->
+                    <div class="ab-options">
+                        <div class="ab-options-title">SEARCH OPTIONS</div>
+                        <label class="ab-check"><input type="checkbox" /> <span>Shop with Miles</span></label>
+                        <label class="ab-check"><input type="checkbox" /> <span>Refundable Fares Only</span></label>
+                        <label class="ab-check"><input type="checkbox" /> <span>My dates are flexible</span></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEMBERSHIPS -->
+        <section id="memberships">
+            <div class="container">
+                <div class="memberships">
+                    <h2 class="section-title">Aether Memberships</h2>
+                    <p class="section-sub">Subtle luxury for frequent travelers</p>
+
+                    <div class="membership-cards" role="list">
+                        <div class="m-card active" data-name="Gold" role="listitem" tabindex="0">
+                            <img src="../aetherairlines-v1/img/3-1-memberships-gold-lounge.jpg" width="300" height="400"
+                                alt="Gold lounge">
+                            <div class="m-overlay">
+                                <h3>Gold</h3>
+                                <p>Subtle luxury for frequent travelers</p>
+                            </div>
+                        </div>
+
+                        <div class="m-card" data-name="Platinum" role="listitem" tabindex="0">
+                            <img src="../aetherairlines-v1/img/3-2-memberships-platinum-airlinerow.jpg" width="300"
+                                height="400" alt="Platinum cabin">
+                            <div class="m-overlay">
+                                <h3>Platinum</h3>
+                                <p>Premium comfort for seasoned flyers</p>
+                            </div>
+                        </div>
+
+                        <div class="m-card" data-name="Elite" role="listitem" tabindex="0">
+                            <img src="../aetherairlines-v1/img/3-3-2-memberships-elite-cabinbar.jpg" alt="Elite suite"
+                                width="300" height="400">
+                            <div class="m-overlay">
+                                <h3>Elite</h3>
+                                <p>Exclusive service at every step</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="center">
+                        <button class="btn primary cta">Find Your Perfect Membership</button>
+                    </div>
+
+                    <img class="cloud-divider cloud-1"
+                        src="../aetherairlines-v1/img/3-4-2-memberships-clouds-darkblue.jpg" alt="Blue Cloud">
+                    <img class="cloud-divider cloud-2"
+                        src="../aetherairlines-v1/img/3-4-2-memberships-clouds-darkblue.jpg" alt="Blue Cloud">
+                    <img class="cloud-divider cloud-3"
+                        src="../aetherairlines-v1/img/3-4-2-memberships-clouds-darkblue.jpg" alt="Blue Cloud">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TOP DESTINATIONS (carousel) -->
+        <section id="destinations">
+
+            <div class="container">
+                <div class="destinations">
+
+                    <div class="dest-header">
+                        <div>
+                            <h2 class="section-title">Top Destinations</h2>
+                            <p class="section-sub">Elevate your travels to the world’s most sought-after
+                                destinations.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-wrap">
+                        <button class="scroll-btn left" aria-label="Scroll left">&lt;</button>
+
+                        <div class="carousel" tabindex="0" aria-roledescription="carousel"
+                            aria-label="Top destinations">
+                            <div class="d-card">
+                                <img src="../aetherairlines-v1/img/4-1-destinations-lasvegas.jpg" alt="Las Vegas">
+                                <span class="d-title">Las Vegas</span>
+                            </div>
+
+                            <div class="d-card">
+                                <img src="../aetherairlines-v1/img/4-2-destinations-cancun.jpg" alt="Cancun">
+                                <span class="d-title">Cancun</span>
+                            </div>
+
+                            <div class="d-card">
+                                <img src="../aetherairlines-v1/img/4-3-destinations-orlando.jpg" alt="Orlando">
+                                <span class="d-title">Orlando</span>
+                            </div>
+
+                            <div class="d-card">
+                                <img src="../aetherairlines-v1/img/4-4-destinations-monterey.jpg" alt="Monterey">
+                                <span class="d-title">Monterey</span>
+                            </div>
+
+                            <div class="d-card">
+                                <img src="../aetherairlines-v1/img/4-5-destinations-maui.jpg" alt="Maui">
+                                <span class="d-title">Maui</span>
+                            </div>
+
+                            <div class="d-card">
+                                <img src="../aetherairlines-v1/img/4-6-destinations-chicago.jpg" alt="Chicago">
+                                <span class="d-title">Chicago</span>
+                            </div>
+
+                            <div class="d-card">
+                                <img src="../aetherairlines-v1/img/4-7-destinations-seattle.jpg" alt="Seattle">
+                                <span class="d-title">Seattle</span>
+                            </div>
+
+                            <div class="d-card">
+                                <img src="../aetherairlines-v1/img/4-8-destinations-sanfrancisco.jpg"
+                                    alt="San Francisco">
+                                <span class="d-title">San Francisco</span>
+                            </div>
+                        </div>
+
+
+                        <button class="scroll-btn right" aria-label="Scroll right">&gt;</button>
+                    </div>
+
+                    <div class="center">
+                        <button class="btn primary cta view-more">View More Destinations</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FLIGHT DETAIL ============ -->
+        <section id="flight-detail" class="flight-detail">
+            <div class="container">
+                <div class="flight-detail-grid">
+                    <!-- LEFT -->
+                    <div class="flight-detail-intro">
+                        <h2>Where every detail takes flight.</h2>
+                        <p>
+                            Thoughtful design is at the heart of every Aether journey. From ambient lighting and quiet
+                            cabins to
+                            personalized service, we’ve elevated every touchpoint. Our goal: transform ordinary flights
+                            into
+                            moments
+                            of calm and connection – redefining what premium air travel can be.
+                        </p>
+
+                        <img class="airplane-1" src="../aetherairline-v1/img/5-6-2-detail-airplane-lightblue.svg"
+                            alt="Airplane Light Blue">
+
+                        <img class="airplane-2" src="../aetherairlines-v1/img/5-5-2-detail-airplane-darkblue.png"
+                            alt="Airplane Dark Blue">
+
+
+                    </div>
+
+
+
+                    <!-- RIGHT -->
+                    <div class="flight-detail-features">
+                        <article class="fd-card">
+                            <div class="fd-icon">
+                                <img src="../aetherairlines-v1/img/5-1-2-detail-chair-icon.png" alt="Flight Seat Icon">
+                            </div>
+                            <div class="fd-text">
+                                <h3>Intuitive Comfort</h3>
+                                <p>Smart spaces designed to adapt to you, not the <br> other way around.</p>
+                            </div>
+                        </article>
+
+                        <article class="fd-card">
+                            <div class="fd-icon">
+                                <img src="../aetherairlines-v1/img/5-2-2-detail-tools-icon.jpg" alt="Tools Icon">
+                            </div>
+                            <div class="fd-text">
+                                <h3>Aesthetic Engineering</h3>
+                                <p>Every detail – from lighting to layout – crafted for <br> harmony and poise.</p>
+                            </div>
+                        </article>
+
+                        <article class="fd-card">
+                            <div class="fd-icon">
+                                <img src="../aetherairlines-v1/img/5-4-2-detail-serveplate-icon.png" alt="Service Icon">
+                            </div>
+                            <div class="fd-text">
+                                <h3>Human-Centered Service</h3>
+                                <p>Genuine hospitality that blends warmth, precision, <br> and discretion.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <img class="seattle-skyline" src="../aetherairlines-v1/img/5-7-2-detail-seattle-skyline.svg"
+                alt="Seattle Skyline" />
+
+        </section>
+
+        <!-- QUOTE -->
+        <section class="quote container" aria-labelledby="aether-quote">
+            <div class="container">
+                <div class="quote-card">
+                    <blockquote id="aether-quote" class="q-text">
+                        Elevate your travel.<br />Elevate yourself.
+                    </blockquote>
+                    <cite class="q-cite">— Aether Philosophy</cite>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- BOOKING MADE EASY (left column cards with images) -->
+        <section id="booking" class="booking-made container" aria-labelledby="booking-title">
+            <div class="container">
+                <div class="bm-grid">
+                    <!-- LEFT: stacked feature cards -->
+                    <div class="bm-left">
+                        <article class="bm-card">
+                            <div class="bm-icon">
+                                <img src="../aetherairlines-v1/img/6-1-2-booking-airplaine-icon.png"
+                                    alt="Airplane icon" />
+                            </div>
+                            <div class="bm-text">
+                                <h4>Smart Search</h4>
+                                <p>Find your perfect flight in seconds</p>
+                            </div>
+                        </article>
+
+                        <article class="bm-card">
+                            <div class="bm-icon">
+                                <img src="../aetherairlines-v1/img/6-2-2-booking-calender-icon.png"
+                                    alt="Calendar icon" />
+                            </div>
+                            <div class="bm-text">
+                                <h4>Flexible Booking</h4>
+                                <p>Change plans without hassle</p>
+                            </div>
+                        </article>
+
+                        <article class="bm-card">
+                            <div class="bm-icon">
+                                <img src="../aetherairlines-v1/img/6-3-2-booking-checklist-icon.png"
+                                    alt="Checklist icon" />
+                            </div>
+                            <div class="bm-text">
+                                <h4>Personalized Experience</h4>
+                                <p>Tailored just for you</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- RIGHT: title, copy, CTA, decorative mark -->
+                    <div class="bm-right">
+                        <h2 id="booking-title">Booking Made Easy</h2>
+                        <p class="bm-lead">From search to takeoff, every step is designed to be effortless.</p>
+                        <a class="btn primary bm-cta" href="#">Book Your Next Journey</a>
+
+                        <!-- Optional decorative mark -->
+                        <img class="bm-mark" src="../aetherairlines-v1/img/6-4-2-booking-bird-logo-medium.svg" alt=""
+                            aria-hidden="true" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- JOURNEYS -->
+        <section id="journeys" class="journeys container" aria-labelledby="journeys-title">
+            <div class="container">
+                <div class="journeys-wrap">
+                    <h2 id="journeys-title" class="journeys-title">Journeys worth sharing</h2>
+
+                    <div class="t-grid" role="list">
+                        <!-- Left / Dark card -->
+                        <article class="t-card t-card--dark" role="listitem">
+                            <p class="t-quote">
+                                “Flying with Aether isn’t just about getting from one place to another — it’s an
+                                experience
+                                in itself.
+                                From the serene lounges to the impeccable in-flight service, every moment feels
+                                meticulously
+                                crafted.
+                                I’ve never felt more at ease traveling internationally.”
+                            </p>
+
+                            <div class="t-meta">
+                                <img class="t-avatar" src="../aetherairlines-v1/img/7-1-journeys-isabella.jpg"
+                                    alt="Isabella Chen" />
+                                <p class="t-name">–Isabella Chen,<br><span>Business Traveler</span></p>
+                            </div>
+                        </article>
+
+                        <!-- Right / Light card -->
+                        <article class="t-card t-card--light" role="listitem">
+                            <p class="t-quote">
+                                “Aether Airlines redefines what it means to fly in comfort. Every detail, from seating
+                                to
+                                cuisine,
+                                exudes thoughtful elegance. I find myself planning trips just to enjoy <br> the journey
+                                itself.”
+                            </p>
+
+                            <div class="t-meta">
+                                <img class="t-avatar" src="../aetherairlines-v1/img/7-2-journeys-marcus.jpg"
+                                    alt="Marcus Le Blanc" />
+                                <p class="t-name">–Marcus Le Blanc,<br><span>Frequent Flyer</span></p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="center">
+                        <a href="#" class="btn primary t-cta">Hear More Stories</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer full-bleed">
+        <div class="container footer-inner">
+            <!-- Brand -->
+            <div class="f-brand">
+                <h3 class="f-logo">
+                    <img class="f-logo-big" src="../aetherairlines-v1/img/8-1-2-footer-white-title-logo.png" height="80"
+                        width="200" alt="Aether Airlines Logo">
+                </h3>
+                <p class="f-tag">“Luxury airline that enhances <br> every detail.”</p>
+
+                <!-- Decorative mark (optional) -->
+                <img class="f-mark" src="../aetherairlines-v1/img/8-2-2-footer-white-bird-logo.png" alt=""
+                    aria-hidden="true" />
+            </div>
+
+            <!-- Menu -->
+            <nav class="f-col" aria-label="Menu">
+                <h4>Menu</h4>
+                <ul class="f-links">
+                    <li><a href="#booking">Book</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#memberships">Memberships</a></li>
+                    <li><a href="#lounges">Lounges</a></li>
+                </ul>
+            </nav>
+
+            <!-- Information -->
+            <nav class="f-col" aria-label="Information">
+                <h4>Information</h4>
+                <ul class="f-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Newsletter + Social -->
+            <div class="f-news">
+                <h4>Newsletter</h4>
+                <form class="newsletter" action="#" method="post" onsubmit="return false;">
+                    <label class="sr-only" for="f-email">Enter your E-mail</label>
+                    <input id="f-email" type="email" placeholder="Enter your E-mail" required />
+                    <button type="submit" aria-label="Subscribe">→</button>
+                </form>
+
+                <div class="f-social">
+                    <h5>Social Media</h5>
+                    <div class="icons">
+                        <a href="#" class="icon-btn" aria-label="X (Twitter)">
+                            <img src="../aetherairlines-v1/img/8-3-2-footer-social-x.png" alt="X Logo" />
+                        </a>
+                        <a href="#" class="icon-btn" aria-label="Instagram">
+                            <img src="../aetherairlines-v1/img/8-4-2-footer-social-instagram.png"
+                                alt="Instagram Logo" />
+                        </a>
+                        <a href="#" class="icon-btn" aria-label="Facebook">
+                            <img src="../aetherairlines-v1/img/8-5-2-footer-social-facebook.png" alt="Facebook Logo" />
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2025 Aether Airlines. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
