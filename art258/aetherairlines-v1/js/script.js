@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { root: null, threshold: 0.25 });
     io.observe(section);
 })();
->>>>>>> Stashed changes
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
