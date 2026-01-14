@@ -417,3 +417,25 @@ header {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+/* Group rounded squares */
+
+.page-sub .project {
+    padding: 1.5rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff, #f4f4f4);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    max-width: 900px;
+}
+
+
+/* ART 285 */
+
+.semester-meta {
+    margin: 0 0 1.25rem;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 0.95rem;
+}
