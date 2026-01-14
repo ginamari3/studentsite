@@ -11,10 +11,10 @@
 
 <body class="page-home">
     <header>
-        <div class="site-id">
+        <div class="site-id load-in load-in-delay-1">
             <h1><a href="index.html">GT</a></h1>
         </div>
-        <nav class="site-nav">
+        <nav class="site-nav load-in load-in-delay-2">
             <ul>
                 <li><a href="art128/index.html">ART 128</a></li>
                 <li><a href="art298/index.html">ART 298</a></li>
@@ -41,18 +41,23 @@
         </section>
 
         <section class="courses">
-            <img src="img/courses-thumb-image.jpg"
+            <img class="reveal" src="img/courses-thumb-image.jpg"
                 alt="Photo of me and my friend standing on the side of the boat on a sunrise boat ride in Waikiki."
                 width="400" height="298">
-            <h3>My Courses</h3>
-            <ul>
-                <li><a href="art128/index.html">ART 128 Interface Programming I</a></li>
-                <li><a href="art298/index.html">ART 298 - Internship</a></li>
-                <li><a href="art249/index.html">ART 249 - Interface Design II</a></li>
-                <li><a href="art258/index.html">ART 258 - Interface Programming II</a></li>
-                <li><a href="art285/index.html">ART 285 - Design </a></li>
-                <li><a href="art295/index.html">ART 295 - Portfolio</a></li>
+            <h3 class="reveal">My Courses</h3>
+            <ul class="course-grid">
+                <li class="course-card reveal"><a href="art128/index.html">ART 128<span>Interface Programming
+                            I</span></a></li>
+                <li class="course-card reveal"><a href="art298/index.html">ART 298<span>Internship</span></a></li>
+                <li class="course-card reveal"><a href="art249/index.html">ART 249<span>Interface Design II</span></a>
+                </li>
+                <li class="course-card reveal"><a href="art258/index.html">ART 258<span>Interface Programming
+                            II</span></a>
+                </li>
+                <li class="course-card reveal"><a href="art285/index.html">ART 285<span>Design</span></a></li>
+                <li class="course-card reveal"><a href="art295/index.html">ART 295<span>Portfolio</span></a></li>
             </ul>
+
 
         </section>
 
@@ -67,6 +72,8 @@
             </ul>
         </nav>
     </footer>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>

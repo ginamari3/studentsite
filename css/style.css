@@ -113,8 +113,10 @@ a[href="#"]:visited {
 .courses {
     padding: 6em 1em;
     display: grid;
-    justify-content: center;
+    justify-items: center;
+    text-align: center;
 }
+
 
 .courses ul {
     margin: 0;
@@ -122,9 +124,76 @@ a[href="#"]:visited {
     list-style: none;
 }
 
+
+.courses img {
+    margin: 0 auto 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
 .courses h3 {
     text-align: center;
 }
+
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.course-grid {
+    max-width: 800px;
+    width: 100%;
+}
+
+
+.course-card a {
+    display: block;
+    padding: 1.5rem 1.5rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff, #f4f4f4);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.course-card a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+.course-card span {
+    display: block;
+    margin-top: .4rem;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* FOOTER */
 footer {
@@ -274,3 +343,77 @@ header {
     border: 1px solid rgba(0,0,0,.1) !important;
     color: rgba(0,0,0,.5) !important;
 } */
+
+
+
+/* ART 298  */
+
+.semester {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.semester-title {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+}
+
+.project h4 {
+    margin: 1rem 0 0.5rem;
+}
+
+
+
+/* Animation - scroll trigger */
+
+/* --- Motion: respect reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --- Page-load animations (nav + hero) --- */
+.load-in {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: loadIn 700ms ease forwards;
+}
+
+.load-in-delay-1 {
+    animation-delay: 120ms;
+}
+
+.load-in-delay-2 {
+    animation-delay: 240ms;
+}
+
+.load-in-delay-3 {
+    animation-delay: 360ms;
+}
+
+@keyframes loadIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Scroll reveal animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 600ms ease, transform 600ms ease;
+    will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
