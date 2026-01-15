@@ -62,46 +62,89 @@ header a:hover {
 }
 
 /* SITE NAV */
+/* SITE NAV (desktop-only, no hamburger) */
 .site-nav {
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-    visibility: visible !important;
+    display: block;
 }
-
-
-@media (max-width: 768px) {
-    .site-nav {
-        display: block;
-        width: 100%;
-    }
-
-    .site-nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-top: 1rem;
-    }
-
-    .site-nav li {
-        text-align: center;
-        list-style: none;
-    }
-}
-
 
 .site-nav ul {
     display: flex;
+    flex-direction: row;
+    /* <-- makes it horizontal */
     justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+
+.site-nav li {
     list-style: none;
 }
 
 .site-nav a {
     display: block;
     padding: 1em;
+    text-align: left;
+    /* optional */
 }
+
+/* Hide hamburger controls everywhere */
+.nav-toggle,
+.menu-button,
+.menu-toggle {
+    display: none !important;
+}
+
+/* Screen-reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Button hidden on desktop */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+/* Hamburger bars */
+.nav-toggle .bar {
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 6px 0;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* MOBILE */
+
+
+/* Show nav when open */
+.site-nav.is-open {
+    display: block;
+}
+
+
+
+.site-nav a {
+    padding: 0.9rem 0.5rem;
+    text-align: center;
+}
+
+
+
 
 /* MAIN */
 main {
@@ -466,4 +509,24 @@ header {
     margin: 0 0 1.25rem;
     color: rgba(0, 0, 0, 0.55);
     font-size: 0.95rem;
+}
+
+/* Never hide content just because animation is disabled */
+@media (prefers-reduced-motion: reduce) {
+    .load-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+
+.site-nav {
+    display: flex !important;
+    position: static;
+    background: none;
+}
+
+.menu-button,
+.menu-toggle {
+    display: none !important;
 }
