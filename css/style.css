@@ -63,12 +63,29 @@ header a:hover {
 
 /* SITE NAV */
 .site-nav {
-    display: none;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    visibility: visible !important;
 }
 
-@media (min-width: 600px) {
+
+@media (max-width: 768px) {
     .site-nav {
         display: block;
+        width: 100%;
+    }
+
+    .site-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .site-nav li {
+        text-align: center;
+        list-style: none;
     }
 }
 

@@ -16,3 +16,6 @@ const observer = new IntersectionObserver(
 );
 
 revealItems.forEach((el) => observer.observe(el));
+
+
+document.querySelectorAll('.load-in').forEach(...)
